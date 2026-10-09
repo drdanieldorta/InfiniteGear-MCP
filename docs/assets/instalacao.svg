@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1020" height="278" viewBox="0 0 1020 278" role="img" aria-labelledby="title desc">
+  <title id="title">Instale o InfiniteGear MCP em três etapas</title>
+  <desc id="desc">Um: baixe o ZIP no GitHub e extraia a pasta. Dois: abra o instalador do seu sistema e cole seu token; o endereço já está configurado. Três: conecte o MCP ao aplicativo de IA e reinicie o aplicativo.</desc>
+  <rect width="1020" height="278" rx="20" fill="#0f172a"/>
+  <text x="32" y="40" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#f8fafc">InfiniteGear MCP</text>
+  <text x="32" y="65" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1">Do download à sua IA, com um assistente no navegador.</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="26" y="90" width="302" height="162" rx="14" fill="#1e293b" stroke="#334155"/>
+    <circle cx="57" cy="123" r="18" fill="#38bdf8"/>
+    <text x="57" y="129" text-anchor="middle" font-size="17" font-weight="700" fill="#082f49">1</text>
+    <text x="86" y="130" font-size="19" font-weight="700" fill="#f8fafc">Baixe a pasta</text>
+    <rect x="46" y="154" width="140" height="31" rx="7" fill="#15803d"/>
+    <text x="116" y="175" text-anchor="middle" font-size="14" fill="#ffffff">Code ▾</text>
+    <text x="46" y="210" font-size="15" fill="#e2e8f0">Download ZIP → Extrair tudo</text>
+    <text x="46" y="233" font-size="13" fill="#94a3b8">Antes: instale o Node.js LTS.</text>
+    <rect x="359" y="90" width="302" height="162" rx="14" fill="#1e293b" stroke="#334155"/>
+    <circle cx="390" cy="123" r="18" fill="#38bdf8"/>
+    <text x="390" y="129" text-anchor="middle" font-size="17" font-weight="700" fill="#082f49">2</text>
+    <text x="419" y="130" font-size="19" font-weight="700" fill="#f8fafc">Abra o instalador</text>
+    <text x="379" y="171" font-size="15" fill="#e2e8f0">Escolha Windows, macOS ou Linux.</text>
+    <text x="379" y="202" font-size="15" fill="#e2e8f0">Cole sua chave e teste a conexão.</text>
+    <text x="379" y="233" font-size="13" fill="#94a3b8">O assistente abre no navegador.</text>
+    <rect x="692" y="90" width="302" height="162" rx="14" fill="#1e293b" stroke="#334155"/>
+    <circle cx="723" cy="123" r="18" fill="#38bdf8"/>
+    <text x="723" y="129" text-anchor="middle" font-size="17" font-weight="700" fill="#082f49">3</text>
+    <text x="752" y="130" font-size="19" font-weight="700" fill="#f8fafc">Conecte à sua IA</text>
+    <text x="712" y="171" font-size="15" fill="#e2e8f0">Siga a configuração mostrada.</text>
+    <text x="712" y="202" font-size="15" fill="#e2e8f0">Reinicie o aplicativo de IA.</text>
+    <text x="712" y="233" font-size="13" fill="#94a3b8">Comece em modo de leitura.</text>
+  </g>
+</svg>

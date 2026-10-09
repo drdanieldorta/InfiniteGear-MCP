@@ -1,0 +1,149 @@
+# Índice da documentação InfiniteGear
+
+O catálogo incluído contém as definições atuais das 119 operações abaixo, além do login integrado. Alguns links da documentação whitelabel mostram versões anteriores; os arquivos em `data/openapi/` definem os campos usados pelo MCP.
+
+## Introdução
+
+- [Autenticação](https://infinitegear.readme.io/reference/autenticação.md): Entenda como autenticar suas requisições para utilizar a API da InfiniteGear.
+- [Paginação](https://infinitegear.readme.io/reference/paginação.md): Entenda como a paginação nos endpoints de listagem funciona.
+- [Rate Limiting](https://infinitegear.readme.io/reference/rate-limit.md)
+## GUIAS
+
+- [Login integrado](https://infinitegear.readme.io/reference/login-integrado.md): É possível integrar o login entre plataformas, gerando um token via API e direcionando o usuário
+- [Webhooks](https://infinitegear.readme.io/reference/webhooks.md): Entenda como receber eventos da InfiniteGear em outro sistema.
+- [Webhook no Chatbot](https://infinitegear.readme.io/reference/webhook-no-chatbot.md)
+- [Rastreio de campanha UTM](https://infinitegear.readme.io/reference/rastreio-de-campanha-utm.md): Entenda como rastrear sua campanha utilizando padrões UTM
+- [Informações para Firewall](https://infinitegear.readme.io/reference/informações-para-firewall.md): Empresas que tem regras mais rígidas de firewall podem usar as informações abaixo para configurar suas regras
+- [1. Criar um assistente](https://infinitegear.readme.io/reference/1-criar-uma-chave-api.md): Neste primeiro passo vamos criar juntos um agente IA e configurar as primeiras etapas da integração com o assistente no N8N.
+- [2. Criar o loop no chatbot](https://infinitegear.readme.io/reference/copy-of-1-criar-um-assistente.md): Entenda como criar o modelo de chatbot e configurar o loop de modo que as mensagens enviadas não se percam e sejam sempre processadas por seu assistente.
+- [3. Como ler e responder textos](https://infinitegear.readme.io/reference/3-como-ler-e-responder-textos.md): Vamos adicionar a capacidade de ler e responder textos usando o ChatGPT.
+- [4. Como processar áudios](https://infinitegear.readme.io/reference/4-como-processar-áudios.md): Nessa etapa vamos ensinar como adicionar a capacidade de processar áudios à sua IA.
+- [5. Como processar imagens](https://infinitegear.readme.io/reference/5-como-processar-imagens.md): Nessa etapa vamos ensinar como adicionar a capacidade de processar imagens à sua IA.
+- [Criar token para integração](https://infinitegear.readme.io/reference/criar-token-para-integração.md)
+- [N8N](https://infinitegear.readme.io/reference/makecom.md)
+- [Make.com](https://infinitegear.readme.io/reference/makecom.md)
+## Core
+
+- [Obter url para upload — get_v2-file](https://infinitegear.readme.io/reference/get_v2-file.md): Envie os metadados do arquivo e você receberá uma URL e deverá fazer upload para ela usando o método PUT<br /> Após enviar o conteúdo do arquivo, faça uma chamada para o endpont POST /core/v2/file
+- [Salvar arquivo — post_v2-file](https://infinitegear.readme.io/reference/post_v2-file.md): Após o upload do arquivo na URL fornecida na rota GET /core/v2/file execute este metodo para obter o ID do arquivo<br />O Id do arquivo pode ser fornecido no envio de mensagens. <br /><br />O FileId…
+- [Listar — get_v1-custom-field](https://infinitegear.readme.io/reference/get_v1-custom-field.md)
+- [Listar — get_v1-portfolio](https://infinitegear.readme.io/reference/get_v1-portfolio.md): Listagem paginada de carteiras.
+- [Listar contatos — get_v1-portfolio-id-contact](https://infinitegear.readme.io/reference/get_v1-portfolio-id-contact.md): Listagem de contatos associados a uma carteira.
+- [Adicionar contato — post_v1-portfolio-id-contact](https://infinitegear.readme.io/reference/post_v1-portfolio-id-contact.md): Adicione um contato em uma carteira.
+- [Remover contato — delete_v1-portfolio-id-contact](https://infinitegear.readme.io/reference/delete_v1-portfolio-id-contact.md): Remova um contato de uma carteira.
+- [Adicionar contatos — post_v1-portfolio-id-contact-batch](https://infinitegear.readme.io/reference/post_v1-portfolio-id-contact-batch.md): Adicione contatos em uma carteira adicionando um filtro.
+- [Remover contatos — delete_v1-portfolio-id-contact-batch](https://infinitegear.readme.io/reference/delete_v1-portfolio-id-contact-batch.md): Remova contatos de uma carteira adicionando um filtro.
+- [Listar — get_v1-company](https://infinitegear.readme.io/reference/get_v1-company.md): Para autenticar nos endpoints de Gestão de Contas, utilize o Token de Parceiro.<br />O token pode ser gerado na plataforma em `Admin > Personalizar > Integração`.<br />Envie-o no header…
+- [Criar — post_v1-company](https://infinitegear.readme.io/reference/post_v1-company.md)
+- [Obter por ID — get_v1-company-id](https://infinitegear.readme.io/reference/get_v1-company-id.md)
+- [Atualizar — put_v1-company-id](https://infinitegear.readme.io/reference/put_v1-company-id.md)
+- [Excluir — delete_v1-company-id](https://infinitegear.readme.io/reference/delete_v1-company-id.md)
+- [Ativar — post_v1-company-id-active](https://infinitegear.readme.io/reference/post_v1-company-id-active.md)
+- [Listar tokens da conta — get_v1-company-id-tokens](https://infinitegear.readme.io/reference/get_v1-company-id-tokens.md)
+- [Criar novo token — post_v1-company-id-tokens](https://infinitegear.readme.io/reference/post_v1-company-id-tokens.md)
+- [Remover token — delete_v1-company-id-tokens-tokenid](https://infinitegear.readme.io/reference/delete_v1-company-id-tokens-tokenid.md)
+- [Listar — get_v1-contact](https://infinitegear.readme.io/reference/get_v1-contact.md): Listagem paginada de contatos. Para resultados mais específicos, utilize o endpoint `/filter`.
+- [Criar — post_v1-contact](https://infinitegear.readme.io/reference/post_v1-contact.md)
+- [Filtrar — post_v1-contact-filter](https://infinitegear.readme.io/reference/post_v1-contact-filter.md): Filtragem paginada de contatos.
+- [Obter por Número de telefone — get_v1-contact-phonenumber-phone](https://infinitegear.readme.io/reference/get_v1-contact-phonenumber-phone.md)
+- [Atualizar por Número de telefone — put_v1-contact-phonenumber-phone](https://infinitegear.readme.io/reference/put_v1-contact-phonenumber-phone.md)
+- [Obter por ID — get_v1-contact-id](https://infinitegear.readme.io/reference/get_v1-contact-id.md)
+- [Atualizar — put_v2-contact-id](https://infinitegear.readme.io/reference/put_v2-contact-id.md)
+- [Atualizar etiquetas por Número de telefone — post_v1-contact-phonenumber-phone-tags](https://infinitegear.readme.io/reference/post_v1-contact-phonenumber-phone-tags.md)
+- [Atualizar etiquetas — post_v1-contact-id-tags](https://infinitegear.readme.io/reference/post_v1-contact-id-tags.md)
+- [Salvar em massa — post_v2-contact-batch](https://infinitegear.readme.io/reference/post_v2-contact-batch.md): Permite salvar até 100 contatos em uma única requisição.<br />Se um contato com o mesmo número de telefone, Instagram ou endereço de email já existir, este apenas será atualizado.
+- [Campos personalizados — get_v1-contact-custom-field](https://infinitegear.readme.io/reference/get_v1-contact-custom-field.md)
+- [Criar — post_v1-department](https://infinitegear.readme.io/reference/post_v1-department.md)
+- [Listar — get_v2-department](https://infinitegear.readme.io/reference/get_v2-department.md)
+- [Obter por ID — get_v1-department-id](https://infinitegear.readme.io/reference/get_v1-department-id.md)
+- [Atualizar — put_v1-department-id](https://infinitegear.readme.io/reference/put_v1-department-id.md)
+- [Excluir — delete_v1-department-id](https://infinitegear.readme.io/reference/delete_v1-department-id.md)
+- [Atualizar usuários — put_v1-department-id-agents](https://infinitegear.readme.io/reference/put_v1-department-id-agents.md)
+- [Listar canais — get_v1-department-id-channel](https://infinitegear.readme.io/reference/get_v1-department-id-channel.md)
+- [Listar — get_v1-tag](https://infinitegear.readme.io/reference/get_v1-tag.md)
+- [Criar — post_v1-tag](https://infinitegear.readme.io/reference): Cria uma etiqueta na conta. A cor define automaticamente a cor do texto; quando omitida, a etiqueta é criada em `GRAY_600`.
+- [Listar cores — get_v1-tag-color](https://infinitegear.readme.io/reference): Listagem das cores disponíveis para etiquetas. O valor de `color` é o que deve ser informado na criação e na atualização.
+- [Atualizar — put_v1-tag-id](https://infinitegear.readme.io/reference): Atualiza o nome e a cor de uma etiqueta. Quando a cor é omitida, a cor atual é mantida.
+- [Excluir — delete_v1-tag-id](https://infinitegear.readme.io/reference): Exclui uma etiqueta. Quando a etiqueta estiver vinculada a contatos, a exclusão é recusada até que seja
+- [Obter — get_v1-company-officehours](https://infinitegear.readme.io/reference)
+- [Relatório de faturamento — get_v2-partner-billing-report](https://infinitegear.readme.io/reference): Para autenticar nos endpoints de Parceiros, utilize o Token de Parceiro.<br />O token pode ser gerado na plataforma em `Admin > Personalizar > Integração`.<br />Envie-o no header `Authorization` com…
+- [Listar — get_v1-agent](https://infinitegear.readme.io/reference/get_v1-agent.md)
+- [Criar — post_v1-agent](https://infinitegear.readme.io/reference/post_v1-agent.md)
+- [Obter por ID — get_v1-agent-id](https://infinitegear.readme.io/reference/get_v1-agent-id.md)
+- [Atualizar — put_v1-agent-id](https://infinitegear.readme.io/reference/put_v1-agent-id.md)
+- [Excluir — delete_v1-agent-id](https://infinitegear.readme.io/reference/delete_v1-agent-id.md)
+- [Atualizar equipes — post_v1-agent-id-departments](https://infinitegear.readme.io/reference/post_v1-agent-id-departments.md)
+- [Alterar status — post_v1-agent-id-status](https://infinitegear.readme.io/reference/post_v1-agent-id-status.md)
+- [Fazer logout — post_v1-agent-id-logout](https://infinitegear.readme.io/reference/post_v1-agent-id-logout.md)
+- [Listar eventos — get_v1-webhook-event](https://infinitegear.readme.io/reference/get_v1-webhook-event.md): Listagem dos eventos de webhook que podem ser assinados.
+- [Listar assinaturas — get_v1-webhook-subscription](https://infinitegear.readme.io/reference/get_v1-webhook-subscription.md): Listagem das assinaturas de webhook ativas e inativas.
+- [Cria assinatura — post_v1-webhook-subscription](https://infinitegear.readme.io/reference/post_v1-webhook-subscription.md): Cria assinatura de webhook.
+- [Busca assinatura por ID — get_v1-webhook-subscription-subscriptionid](https://infinitegear.readme.io/reference/get_v1-webhook-subscription-subscriptionid.md): Busca assinatura de webhook através do ID.
+- [Atualiza assinatura — put_v1-webhook-subscription-subscriptionid](https://infinitegear.readme.io/reference/put_v1-webhook-subscription-subscriptionid.md): Atualiza assinatura de webhook.
+- [Remove assinatura — delete_v1-webhook-subscription-subscriptionid](https://infinitegear.readme.io/reference/delete_v1-webhook-subscription-subscriptionid.md): Remove assinatura de webhook.
+## Chat
+
+- [Listar — get_v1-channel](https://infinitegear.readme.io/reference/get_v1-channel.md): Listagem de canais de atendimento.
+- [Listar — get_v1-chatbot](https://infinitegear.readme.io/reference/get_v1-chatbot.md): Listagem de chatbots.
+- [Enviar chatbot — post_v1-chatbot-send](https://infinitegear.readme.io/reference/post_v1-chatbot-send.md): Permite iniciar a execução de um chatbot.<br />Durante a execução do chatbot, a interação com a conversa fica desabilitada para atendentes na central de atendimento.<br />A execução pode ser…
+- [Listar — get_v2-session](https://infinitegear.readme.io/reference): Listagem paginada de conversas.
+- [Obter por ID — get_v2-session-id](https://infinitegear.readme.io/reference)
+- [Transferir — put_v1-session-id-transfer](https://infinitegear.readme.io/reference/put_v1-session-id-transfer.md)
+- [Atribuir usuário — put_v1-session-id-assignee](https://infinitegear.readme.io/reference/put_v1-session-id-assignee.md)
+- [Concluir — put_v1-session-id-complete](https://infinitegear.readme.io/reference/put_v1-session-id-complete.md)
+- [Alterar status — put_v1-session-id-status](https://infinitegear.readme.io/reference/put_v1-session-id-status.md)
+- [Alterar — put_v2-session-id-partial](https://infinitegear.readme.io/reference/put_v2-session-id-partial.md): Atualiza um ou mais atributos de uma conversa. Para usar você deve informar o novo valor do atribuito e quais atributos serão atualizados.
+- [Listar mensagens — get_v1-session-id-message](https://infinitegear.readme.io/reference/get_v1-session-id-message.md): Listagem paginada de mensagens por ID de uma conversa.
+- [Enviar mensagem — post_v1-session-id-message](https://infinitegear.readme.io/reference/post_v1-session-id-message.md): Este endpoint segue as mesmas regras do canal de atendimento, por exemplo: uma conversa só pode ser iniciada no WhatsApp utilizando um modelo de mensagem.<br />Caso o contato não esteja cadastrado,…
+- [Enviar mensagem síncrona — post_v1-session-id-message-sync](https://infinitegear.readme.io/reference/post_v1-session-id-message-sync.md): Este endpoint segue as mesmas regras do canal de atendimento, por exemplo: uma conversa só pode ser iniciada no WhatsApp utilizando um modelo de mensagem.<br />Caso o contato não esteja cadastrado,…
+- [Salvar nota interna — post_v1-session-id-note](https://infinitegear.readme.io/reference/post_v1-session-id-note.md)
+- [Listar notas internas — get_v1-session-id-note](https://infinitegear.readme.io/reference/get_v1-session-id-note.md): Este endpoint permite a listagem de notas internas de um atendimento.
+- [Obter uma nota interna — get_v1-session-note-id](https://infinitegear.readme.io/reference/get_v1-session-note-id.md): Este endpoint permite a obtenção de uma nota interna por meio de seu ID.
+- [Excluir uma nota interna — delete_v1-session-note-id](https://infinitegear.readme.io/reference/delete_v1-session-note-id.md): Este endpoint permite a exclusão de uma nota interna por meio de seu ID.
+- [OTP — post_v1-send-otp](https://infinitegear.readme.io/reference): Envia uma senha OTP para um contato no WhatsApp.
+- [OTP status — get_v1-send-otp-id](https://infinitegear.readme.io/reference): Consulta o status atual de uma mensagem OTP enviada anteriormente.
+- [Texto — post_v1-send-text](https://infinitegear.readme.io/reference): Envia uma mensagem de texto simples para um contato.
+- [Áudio — post_v1-send-audio](https://infinitegear.readme.io/reference): Envia uma mensagem de áudio para um contato.
+- [Vídeo — post_v1-send-video](https://infinitegear.readme.io/reference): Envia uma mensagem de vídeo para um contato.
+- [Imagem — post_v1-send-image](https://infinitegear.readme.io/reference): Envia uma mensagem de imagem para um contato.
+- [Documento — post_v1-send-document](https://infinitegear.readme.io/reference): Envia uma mensagem de documento para um contato.
+- [Modelo — post_v1-send-template](https://infinitegear.readme.io/reference): Envia um modelo de mensagem para um único destinatário.
+- [Modelo (em lote) — post_v1-send-template-batch](https://infinitegear.readme.io/reference): Envia um modelo de mensagem para múltiplos destinatários em uma única requisição.
+- [Mensagem status — get_v1-send-message-id](https://infinitegear.readme.io/reference): Consulta o status atual de uma mensagem enviada anteriormente pelos endpoints de envio.
+- [Digitando — post_v1-send-typing](https://infinitegear.readme.io/reference): Envia o indicador de "digitando" para o contato da conversa informada.
+- [Chatbot — post_v1-send-chatbot](https://infinitegear.readme.io/reference): Enfileira o disparo de um chatbot para um contato.<br />
+- [Chatbot (em lote) — post_v1-send-chatbot-batch](https://infinitegear.readme.io/reference): Enfileira o disparo de um chatbot para múltiplos contatos em uma única requisição.<br />
+- [Chatbot status — get_v1-send-chatbot-id](https://infinitegear.readme.io/reference): Consulta o status atual de um disparo de chatbot enfileirado anteriormente pelos endpoints de envio.<br />
+- [Enviar — post_v1-message-send](https://infinitegear.readme.io/reference/post_v1-message-send.md): Este endpoint segue as mesmas regras do canal de atendimento, por exemplo: uma conversa só pode ser iniciada no WhatsApp utilizando um modelo de mensagem.<br />Caso o contato não esteja cadastrado,…
+- [Enviar síncrono — post_v1-message-send-sync](https://infinitegear.readme.io/reference/post_v1-message-send-sync.md): Este endpoint segue as mesmas regras do canal de atendimento, por exemplo: uma conversa só pode ser iniciada no WhatsApp utilizando um modelo de mensagem.<br />Caso o contato não esteja cadastrado,…
+- [Obter por ID — get_v1-message-id](https://infinitegear.readme.io/reference/get_v1-message-id.md)
+- [Obter status por ID — get_v1-message-id-status](https://infinitegear.readme.io/reference/get_v1-message-id-status.md)
+- [Excluir mensagem — delete_v1-message-id](https://infinitegear.readme.io/reference/delete_v1-message-id.md)
+- [Listar — get_v1-message](https://infinitegear.readme.io/reference/get_v1-message.md): Listagem paginada de mensagens por ID de uma conversa.
+- [Listar — get_v1-scheduled-message](https://infinitegear.readme.io/reference/get_v1-scheduled-message.md): Listagem paginada de mensagens agendadas com filtros opcionais.
+- [Criar — post_v1-scheduled-message](https://infinitegear.readme.io/reference/post_v1-scheduled-message.md): Cria uma nova mensagem agendada com os dados fornecidos.
+- [Obter por ID — get_v1-scheduled-message-id](https://infinitegear.readme.io/reference/get_v1-scheduled-message-id.md): Retorna os detalhes de uma mensagem agendada específica.
+- [Atualizar — put_v1-scheduled-message-id](https://infinitegear.readme.io/reference/put_v1-scheduled-message-id.md): Atualiza uma mensagem agendada existente. Mensagens já enviadas não podem ser editadas.
+- [Cancelar — post_v1-scheduled-message-id-cancel](https://infinitegear.readme.io/reference/post_v1-scheduled-message-id-cancel.md): Cancela uma mensagem agendada específica. Apenas mensagens com status agendado podem ser canceladas.
+- [Cancelar em massa — post_v1-scheduled-message-batch-cancel](https://infinitegear.readme.io/reference/post_v1-scheduled-message-batch-cancel.md): Cancela em massa mensagens agendadas. Apenas mensagens com status agendado podem ser canceladas.
+- [Listar — get_v1-template](https://infinitegear.readme.io/reference/get_v1-template.md): Listagem paginada de modelos de mensagem.
+- [Listar — get_v1-sequence](https://infinitegear.readme.io/reference/get_v1-sequence.md): Listagem paginada de sequências.
+- [Listar contatos — get_v2-sequence-id-contact](https://infinitegear.readme.io/reference): Listagem paginada de contatos da sequência.
+- [Adicionar contato — post_v1-sequence-id-contact](https://infinitegear.readme.io/reference/post_v1-sequence-id-contact.md): Adicione um contato em uma sequência.
+- [Remover contato — delete_v1-sequence-id-contact](https://infinitegear.readme.io/reference/delete_v1-sequence-id-contact.md): Remova um contato de uma sequência.
+- [Adicionar contatos — post_v1-sequence-id-contact-batch](https://infinitegear.readme.io/reference/post_v1-sequence-id-contact-batch.md): Adicione contatos em uma sequência adicionando um filtro.
+- [Remover contatos — delete_v1-sequence-id-contact-batch](https://infinitegear.readme.io/reference/delete_v1-sequence-id-contact-batch.md): Remova contatos de uma sequência adicionando um filtro.
+## Crm
+
+- [Listar — get_v2-panel-card](https://infinitegear.readme.io/reference): Listagem paginada de cards.
+- [Criar — post_v2-panel-card](https://infinitegear.readme.io/reference)
+- [Obter por ID — get_v2-panel-card-id](https://infinitegear.readme.io/reference)
+- [Atualizar — put_v3-panel-card-id](https://infinitegear.readme.io/reference)
+- [Duplicar — post_v2-panel-card-id-duplicate](https://infinitegear.readme.io/reference)
+- [Listar anotações — get_v1-panel-card-cardid-note](https://infinitegear.readme.io/reference/get_v1-panel-card-cardid-note.md): Listagem paginada de anotações.
+- [Adicionar anotação — post_v1-panel-card-cardid-note](https://infinitegear.readme.io/reference/post_v1-panel-card-cardid-note.md)
+- [Remover anotação — delete_v1-panel-card-cardid-note-noteid](https://infinitegear.readme.io/reference/delete_v1-panel-card-cardid-note-noteid.md)
+- [Listar painéis — get_v2-panel](https://infinitegear.readme.io/reference)
+- [Obter por ID — get_v1-panel-id](https://infinitegear.readme.io/reference/get_v1-panel-id.md)
+- [Campos personalizados — get_v1-panel-id-custom-fields](https://infinitegear.readme.io/reference/get_v1-panel-id-custom-fields.md)
+- [Listar motivos de perda — get_v1-panel-id-lost-reason](https://infinitegear.readme.io/reference): Listagem paginada de motivos de perda do painel.

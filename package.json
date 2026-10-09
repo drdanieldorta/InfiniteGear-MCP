@@ -1,0 +1,33 @@
+{
+  "name": "infinitegear-mcp",
+  "version": "0.1.0",
+  "description": "Conecte seu assistente de IA ao CRM InfiniteGear.",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "infinitegear-mcp": "src/cli.js"
+  },
+  "scripts": {
+    "start": "node src/cli.js stdio",
+    "setup": "node src/cli.js setup",
+    "start:http": "node src/cli.js http",
+    "doctor": "node src/cli.js doctor",
+    "import:api": "node scripts/import-openapi.mjs",
+    "test": "node --test tests/*.test.js",
+    "package:mcpb": "node scripts/package-release.mjs"
+  },
+  "dependencies": {
+    "@apidevtools/swagger-parser": "12.1.0",
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1",
+    "undici": "7.30.0",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@anthropic-ai/mcpb": "2.1.2"
+  }
+}

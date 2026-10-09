@@ -1,0 +1,69 @@
+{
+  "manifest_version": "0.3",
+  "name": "infinitegear-mcp",
+  "display_name": "InfiniteGear MCP",
+  "version": "0.1.0",
+  "description": "Conecte seu assistente de IA ao CRM InfiniteGear.",
+  "long_description": "Consulte contatos, atendimentos, negócios e outros dados do CRM InfiniteGear usando o catálogo de API incluído. Alterações e envio de mensagens ficam bloqueados por padrão. O endereço da API já está configurado: basta informar o token permanente da sua conta.",
+  "author": {
+    "name": "InfiniteGear"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/drdanieldorta/InfiniteGear-MCP.git"
+  },
+  "documentation": "https://github.com/drdanieldorta/InfiniteGear-MCP/blob/codex/infinitegear-mcp/docs/instalacao-local.md",
+  "support": "https://github.com/drdanieldorta/InfiniteGear-MCP/issues",
+  "server": {
+    "type": "node",
+    "entry_point": "src/cli.js",
+    "mcp_config": {
+      "command": "node",
+      "args": ["${__dirname}/src/cli.js", "stdio"],
+      "env": {
+        "INFINITEGEAR_API_URL": "${user_config.api_url}",
+        "INFINITEGEAR_API_TOKEN": "${user_config.api_token}",
+        "INFINITEGEAR_PARTNER_TOKEN": "${user_config.partner_token}",
+        "INFINITEGEAR_ALLOW_WRITES": "${user_config.allow_writes}"
+      }
+    }
+  },
+  "tools_generated": true,
+  "keywords": ["infinitegear", "crm", "api"],
+  "compatibility": {
+    "platforms": ["darwin", "win32", "linux"],
+    "runtimes": {
+      "node": ">=22"
+    }
+  },
+  "user_config": {
+    "api_url": {
+      "type": "string",
+      "title": "URL da API InfiniteGear",
+      "description": "O endereço padrão já está preenchido. Altere somente se o administrador indicar outro endereço de API.",
+      "required": true,
+      "default": "https://api.crm.infinitegear.app"
+    },
+    "api_token": {
+      "type": "string",
+      "title": "Token de acesso",
+      "description": "No InfiniteGear: Ajustes → Integrações → Integração via API → gere um token permanente. Cole somente o token, sem a palavra Bearer.",
+      "sensitive": true,
+      "required": true
+    },
+    "partner_token": {
+      "type": "string",
+      "title": "Token de parceiro (opcional)",
+      "description": "Opcional para operações de parceiro. Gere em Admin → Personalizar → Integração.",
+      "sensitive": true,
+      "required": false,
+      "default": ""
+    },
+    "allow_writes": {
+      "type": "boolean",
+      "title": "Permitir alterações no CRM",
+      "description": "Desativado: somente leitura. Ative para permitir criar, editar, excluir ou enviar mensagens.",
+      "default": false
+    }
+  }
+}
