@@ -6,9 +6,11 @@ O contêiner roda sem usuário root. O Compose publica a porta 3000 **somente em
 
 ## 1 · Baixe e preencha os dados
 
+O comando abaixo seleciona a versão que contém o MCP e o Docker, disponível na branch `codex/infinitegear-mcp` enquanto o [PR #1](https://github.com/drdanieldorta/InfiniteGear-MCP/pull/1) está em revisão.
+
 ```bash
-git clone https://github.com/drdanieldorta/Flw-MCP-v2.git
-cd Flw-MCP-v2
+git clone --branch codex/infinitegear-mcp --single-branch https://github.com/drdanieldorta/InfiniteGear-MCP.git
+cd InfiniteGear-MCP
 cp .env.example .env
 chmod 600 .env
 openssl rand -hex 32

@@ -11,9 +11,11 @@ Você precisa de acesso à internet, um aplicativo compatível com MCP e uma **c
 **Pegue sua chave:** entre no InfiniteGear → **Ajustes** → **Integrações** → **Integração via API** → gere um **token permanente**. Guarde esse token para colar no assistente. Se essa opção não aparecer, peça ao administrador da conta para gerar a chave com as permissões de que você precisa.
 
 1. Abra [nodejs.org](https://nodejs.org/) e instale a versão **LTS** (22 ou superior). Use as opções padrão.
-2. Volte à [página inicial do repositório](https://github.com/drdanieldorta/Flw-MCP-v2).
-3. Clique no botão verde **Code** → **Download ZIP**.
+2. Clique em **[Baixar o InfiniteGear MCP em ZIP](https://github.com/drdanieldorta/InfiniteGear-MCP/archive/refs/heads/codex/infinitegear-mcp.zip)**.
+3. Aguarde o download. Se preferir baixar pelo GitHub, abra a [página desta versão](https://github.com/drdanieldorta/InfiniteGear-MCP/tree/codex/infinitegear-mcp) e clique no botão verde **Code** → **Download ZIP**.
 4. Extraia o ZIP: no Windows, botão direito → **Extrair tudo**; no macOS, dê dois cliques no ZIP. Guarde a pasta extraída em um lugar permanente, como Documentos. O aplicativo de IA usará os arquivos dessa pasta.
+
+A versão com os instaladores está na branch `codex/infinitegear-mcp`, em revisão no [PR #1](https://github.com/drdanieldorta/InfiniteGear-MCP/pull/1). Os links acima já selecionam essa versão.
 
 ## 2 · Abra o instalador
 
@@ -58,7 +60,7 @@ Se você recebeu o arquivo **`infinitegear-mcp-<versão>.mcpb`** do mantenedor:
 
 Não é necessário executar o instalador ou copiar JSON quando você usa a extensão. Instale por apenas um dos caminhos para evitar duas conexões com o mesmo CRM.
 
-O pacote ainda precisa ser publicado pelo mantenedor para aparecer em [Releases](https://github.com/drdanieldorta/Flw-MCP-v2/releases). Se não houver um `.mcpb` disponível, siga o instalador acima. Quem desenvolve o projeto pode gerá-lo conforme [Empacotamento](empacotamento.md); uma execução bem-sucedida do workflow também o disponibiliza nos artefatos de Actions.
+O pacote ainda precisa ser publicado pelo mantenedor para aparecer em [Releases](https://github.com/drdanieldorta/InfiniteGear-MCP/releases). Se não houver um `.mcpb` disponível, siga o instalador acima. Quem desenvolve o projeto pode gerá-lo conforme [Empacotamento](empacotamento.md); uma execução bem-sucedida do workflow também o disponibiliza nos artefatos de Actions.
 
 ## Se algo não funcionar
 

@@ -16,7 +16,11 @@ Conecte contatos, conversas, mensagens, painéis e operações administrativas �
 
 ## Quero instalar no meu computador
 
-Não é preciso saber programar. O [guia ilustrado](docs/instalacao-local.md) explica como baixar o projeto pelo botão **Code → Download ZIP**, instalar o Node.js LTS e abrir o assistente.
+**[Baixar o InfiniteGear MCP em ZIP](https://github.com/drdanieldorta/InfiniteGear-MCP/archive/refs/heads/codex/infinitegear-mcp.zip)**
+
+Não é preciso saber programar. O [guia ilustrado](docs/instalacao-local.md) explica como extrair o ZIP, instalar o Node.js LTS e abrir o assistente.
+
+Esta versão está em revisão no [PR #1](https://github.com/drdanieldorta/InfiniteGear-MCP/pull/1). O link acima baixa a versão que contém os instaladores.
 
 | Seu computador | Abra este arquivo na pasta extraída |
 | --- | --- |
@@ -81,6 +85,6 @@ npm run setup
 | `npm run import:api -- /caminho/openapi.json` | Importar uma especificação oficial local. |
 | `npm run package:mcpb` | Gerar a extensão em `dist/`, com SHA-256. |
 
-Os testes exercitam chamadas MCP reais por stdio/HTTP contra uma **API simulada**, validação de parâmetros, permissões, credenciais, redirecionamentos e proteção do assistente local. Eles não substituem a validação da conta InfiniteGear. A CI está preparada para Node 22/24 e Windows/macOS/Linux; sua execução no GitHub depende de os arquivos serem enviados ao repositório.
+Os testes exercitam chamadas MCP reais por stdio/HTTP contra uma **API simulada**, validação de parâmetros, permissões, credenciais, redirecionamentos e proteção do assistente local. Eles não substituem a validação da conta InfiniteGear. A [CI no GitHub](https://github.com/drdanieldorta/InfiniteGear-MCP/actions/workflows/ci.yml) executa os testes em Node 22/24 e Windows/macOS/Linux e gera o pacote para desktop.
 
 [Configuração e cobertura da API](docs/configuracao-api.md) · [Instalação local](docs/instalacao-local.md) · [VPS](docs/vps.md) · [Empacotamento](docs/empacotamento.md)
