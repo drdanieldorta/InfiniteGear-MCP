@@ -1,0 +1,959 @@
+{
+  "source": "Contratos oficiais de referência, adaptados para InfiniteGear",
+  "date": "2026-10-09",
+  "indexedOperations": 119,
+  "operations": [
+    {
+      "id": "delete_v1-agent-id",
+      "group": "core",
+      "method": "DELETE",
+      "path": "/core/v1/agent/{id}",
+      "documentationUrl": "https://infinitegear.readme.io/reference/delete_v1-agent-id.md",
+      "sourceSha256": "8e9546e323754148d8a499a39d41f9e17fd1d1bad92c01bd4fdc496b2b4821ca"
+    },
+    {
+      "id": "delete_v1-company-id-tokens-tokenid",
+      "group": "core",
+      "method": "DELETE",
+      "path": "/core/v1/company/{id}/tokens/{tokenId}",
+      "documentationUrl": "https://infinitegear.readme.io/reference/delete_v1-company-id-tokens-tokenid.md",
+      "sourceSha256": "59dcba61785c6ac2847729af755077fdd3a8e7677b8f5058bf4b208c0134d5ce"
+    },
+    {
+      "id": "delete_v1-company-id",
+      "group": "core",
+      "method": "DELETE",
+      "path": "/core/v1/company/{id}",
+      "documentationUrl": "https://infinitegear.readme.io/reference/delete_v1-company-id.md",
+      "sourceSha256": "36c287a8c981fcbf8d818666c653908a220d4d2f566bc8839c7609d2f3af9aa7"
+    },
+    {
+      "id": "delete_v1-department-id",
+      "group": "core",
+      "method": "DELETE",
+      "path": "/core/v1/department/{id}",
+      "documentationUrl": "https://infinitegear.readme.io/reference/delete_v1-department-id.md",
+      "sourceSha256": "d61b7fadd4eaddb30dc4daf628d53fa99209b8c8ceaf4a956fb959e12b51161c"
+    },
+    {
+      "id": "delete_v1-message-id",
+      "group": "chat",
+      "method": "DELETE",
+      "path": "/chat/v1/message/{id}",
+      "documentationUrl": "https://infinitegear.readme.io/reference/delete_v1-message-id.md",
+      "sourceSha256": "e86f4b1b5448ae1c59887056e15fa21b06ddafccfab8f115310aaf9778e6f177"
+    },
+    {
+      "id": "delete_v1-panel-card-cardid-note-noteid",
+      "group": "crm",
+      "method": "DELETE",
+      "path": "/crm/v1/panel/card/{cardId}/note/{noteId}",
+      "documentationUrl": "https://infinitegear.readme.io/reference/delete_v1-panel-card-cardid-note-noteid.md",
+      "sourceSha256": "ca947730417cd194e93ecca0e6a5dff1780370f5e892e389841338669404c2e9"
+    },
+    {
+      "id": "delete_v1-portfolio-id-contact-batch",
+      "group": "core",
+      "method": "DELETE",
+      "path": "/core/v1/portfolio/{id}/contact/batch",
+      "documentationUrl": "https://infinitegear.readme.io/reference/delete_v1-portfolio-id-contact-batch.md",
+      "sourceSha256": "762f074b1e7e24b254c1dd3f5e642c294fbbad7d4e9ed731d70210205c59f45f"
+    },
+    {
+      "id": "delete_v1-portfolio-id-contact",
+      "group": "core",
+      "method": "DELETE",
+      "path": "/core/v1/portfolio/{id}/contact",
+      "documentationUrl": "https://infinitegear.readme.io/reference/delete_v1-portfolio-id-contact.md",
+      "sourceSha256": "fc8adcc81c861b49311978f56c8f89f95cf40eeced513fdd062bbd2f6c328e49"
+    },
+    {
+      "id": "delete_v1-sequence-id-contact-batch",
+      "group": "chat",
+      "method": "DELETE",
+      "path": "/chat/v1/sequence/{id}/contact/batch",
+      "documentationUrl": "https://infinitegear.readme.io/reference/delete_v1-sequence-id-contact-batch.md",
+      "sourceSha256": "bab26c9083f1dfb33da4dde3d75ebe40e13f20fb5f3060c85f3316edf6d277b8"
+    },
+    {
+      "id": "delete_v1-sequence-id-contact",
+      "group": "chat",
+      "method": "DELETE",
+      "path": "/chat/v1/sequence/{id}/contact",
+      "documentationUrl": "https://infinitegear.readme.io/reference/delete_v1-sequence-id-contact.md",
+      "sourceSha256": "c57c6a2f29fcd2c8fe79f95947cae623fd26f0b3eb4953c26def60270cd8c4f9"
+    },
+    {
+      "id": "delete_v1-session-note-id",
+      "group": "chat",
+      "method": "DELETE",
+      "path": "/chat/v1/session/note/{id}",
+      "documentationUrl": "https://infinitegear.readme.io/reference/delete_v1-session-note-id.md",
+      "sourceSha256": "32e4d4298f5ce9fb8dc4208ac4ec474858099c108e6043ce119c193ccd34101c"
+    },
+    {
+      "id": "delete_v1-tag-id",
+      "group": "core",
+      "method": "DELETE",
+      "path": "/core/v1/tag/{id}",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "sourceSha256": "1e97f5b3ee50e5374d5d048794e32c08e6029a1349b5bcc9b8a23bce16c355f2"
+    },
+    {
+      "id": "delete_v1-webhook-subscription-subscriptionid",
+      "group": "core",
+      "method": "DELETE",
+      "path": "/core/v1/webhook/subscription/{subscriptionId}",
+      "documentationUrl": "https://infinitegear.readme.io/reference/delete_v1-webhook-subscription-subscriptionid.md",
+      "sourceSha256": "b6ffa215cdbfa55d87212488525b36a20c58d0a2080925f91086f8cdab6b1924"
+    },
+    {
+      "id": "get_v1-agent-id",
+      "group": "core",
+      "method": "GET",
+      "path": "/core/v1/agent/{id}",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-agent-id.md",
+      "sourceSha256": "9d016809f1a2d1cd6a3980110ea2bde2a7549eb78491085344855ae267c3465f"
+    },
+    {
+      "id": "get_v1-agent",
+      "group": "core",
+      "method": "GET",
+      "path": "/core/v1/agent",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-agent.md",
+      "sourceSha256": "2a307ad97687dfee7d220125d8da835745d5a0c86bcfdd267d74954157157fee"
+    },
+    {
+      "id": "get_v1-channel",
+      "group": "chat",
+      "method": "GET",
+      "path": "/chat/v1/channel",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-channel.md",
+      "sourceSha256": "59115edd1f74be1486550871495cbcb77a901b6046a464a814b69f56f4f343cd"
+    },
+    {
+      "id": "get_v1-chatbot",
+      "group": "chat",
+      "method": "GET",
+      "path": "/chat/v1/chatbot",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-chatbot.md",
+      "sourceSha256": "ce7381719392a13c7490011bc0b271f1f3607e5719fbef2f862c38c16027817f"
+    },
+    {
+      "id": "get_v1-company-id-tokens",
+      "group": "core",
+      "method": "GET",
+      "path": "/core/v1/company/{id}/tokens",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-company-id-tokens.md",
+      "sourceSha256": "b8d60828d14ce67372420a147abba1cb89778c32db0d014ae3428d485b62415f"
+    },
+    {
+      "id": "get_v1-company-id",
+      "group": "core",
+      "method": "GET",
+      "path": "/core/v1/company/{id}",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-company-id.md",
+      "sourceSha256": "3348844826c302dbdc7a74612ee80fe23bc139ee8a242f492bb7cfcfa113a056"
+    },
+    {
+      "id": "get_v1-company-officehours",
+      "group": "core",
+      "method": "GET",
+      "path": "/core/v1/company/officehours",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "sourceSha256": "d06fdf8e12f15d4a379d660daa2c296a244be7cb86bb0fa1366e87e14738b1fd"
+    },
+    {
+      "id": "get_v1-company",
+      "group": "core",
+      "method": "GET",
+      "path": "/core/v1/company",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-company.md",
+      "sourceSha256": "8cb578ea149fb822753f1be2b4f7473601ed09d70e6d0b9bc7659a1e908311dd"
+    },
+    {
+      "id": "get_v1-contact-custom-field",
+      "group": "core",
+      "method": "GET",
+      "path": "/core/v1/contact/custom-field",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-contact-custom-field.md",
+      "sourceSha256": "c266ebbda24bc42771e8bbbf17133e1892ff67d11b035a8ab47073924d6646e4"
+    },
+    {
+      "id": "get_v1-contact-id",
+      "group": "core",
+      "method": "GET",
+      "path": "/core/v1/contact/{id}",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-contact-id.md",
+      "sourceSha256": "79d721c14180ad76d0dead7ab62c2714628f510243e947367fabf673e05ac557"
+    },
+    {
+      "id": "get_v1-contact-phonenumber-phone",
+      "group": "core",
+      "method": "GET",
+      "path": "/core/v1/contact/phonenumber/{phone}",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-contact-phonenumber-phone.md",
+      "sourceSha256": "9ce9a23ca6a839d16ae3341387abc133e41946839a08c5b434cffadbb98d929b"
+    },
+    {
+      "id": "get_v1-contact",
+      "group": "core",
+      "method": "GET",
+      "path": "/core/v1/contact",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-contact.md",
+      "sourceSha256": "b27f94f63c8c8adc5f553f65b4ce442b948fc98126f7c6c9aa4ae544768a082e"
+    },
+    {
+      "id": "get_v1-custom-field",
+      "group": "core",
+      "method": "GET",
+      "path": "/core/v1/custom-field",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-custom-field.md",
+      "sourceSha256": "ebb2b4c661349181f8756dda83e548707e21c252a9760cdec53fa1b5d1cabc38"
+    },
+    {
+      "id": "get_v1-department-id-channel",
+      "group": "core",
+      "method": "GET",
+      "path": "/core/v1/department/{id}/channel",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-department-id-channel.md",
+      "sourceSha256": "e84ee17c527aebc77becc8c64ea547e4a8ef17b2dbf7b88f7215ddf3a5c51793"
+    },
+    {
+      "id": "get_v1-department-id",
+      "group": "core",
+      "method": "GET",
+      "path": "/core/v1/department/{id}",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-department-id.md",
+      "sourceSha256": "2845afac17b7a138986d8151d131d2008b18e2c3bb5bd53dc7491fce62e77601"
+    },
+    {
+      "id": "get_v1-message-id-status",
+      "group": "chat",
+      "method": "GET",
+      "path": "/chat/v1/message/{id}/status",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-message-id-status.md",
+      "sourceSha256": "f73693849b302502a40e54e1bbfd9870d6ade138c97af3e2385aaa7e768aab8b"
+    },
+    {
+      "id": "get_v1-message-id",
+      "group": "chat",
+      "method": "GET",
+      "path": "/chat/v1/message/{id}",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-message-id.md",
+      "sourceSha256": "19d5c77b61ac6d9c9543713f78d721c20a262e3d1c73ac8c60f56573a944ee30"
+    },
+    {
+      "id": "get_v1-message",
+      "group": "chat",
+      "method": "GET",
+      "path": "/chat/v1/message",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-message.md",
+      "sourceSha256": "623c7e86562441fc955d657f525b6bc31b0d7554501c008dcbe638197533a05e"
+    },
+    {
+      "id": "get_v1-panel-card-cardid-note",
+      "group": "crm",
+      "method": "GET",
+      "path": "/crm/v1/panel/card/{cardId}/note",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-panel-card-cardid-note.md",
+      "sourceSha256": "acb320ba38f7c71e1138e9a4066b50268f8e075df822fbfe0630947aade49c74"
+    },
+    {
+      "id": "get_v1-panel-id-custom-fields",
+      "group": "crm",
+      "method": "GET",
+      "path": "/crm/v1/panel/{id}/custom-fields",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-panel-id-custom-fields.md",
+      "sourceSha256": "d3c5e5d1320ec5fb2b67aaa7e3af1a5ccea2ac424c3ca1bb73dbc6baa626d77d"
+    },
+    {
+      "id": "get_v1-panel-id-lost-reason",
+      "group": "crm",
+      "method": "GET",
+      "path": "/crm/v1/panel/{id}/lost-reason",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "sourceSha256": "93b7f9616f85170613ff9687ad753b3f34cde5df6105c64025472e500e3c2ac1"
+    },
+    {
+      "id": "get_v1-panel-id",
+      "group": "crm",
+      "method": "GET",
+      "path": "/crm/v1/panel/{id}",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-panel-id.md",
+      "sourceSha256": "c4d191f3bede58ceb6c2f693fe976814e275ab52608fdafb136449680d1a49a1"
+    },
+    {
+      "id": "get_v1-portfolio-id-contact",
+      "group": "core",
+      "method": "GET",
+      "path": "/core/v1/portfolio/{id}/contact",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-portfolio-id-contact.md",
+      "sourceSha256": "b1ee97a3faed4a3e4d3b88d4cabec5126211afd05f0a5ceb8ff547433e4757fb"
+    },
+    {
+      "id": "get_v1-portfolio",
+      "group": "core",
+      "method": "GET",
+      "path": "/core/v1/portfolio",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-portfolio.md",
+      "sourceSha256": "029bdcbc53df4f89e0e7d8ff61fa85ca3ca9f4425a1a56767b7c21da2e0e3ec4"
+    },
+    {
+      "id": "get_v1-scheduled-message-id",
+      "group": "chat",
+      "method": "GET",
+      "path": "/chat/v1/scheduled-message/{id}",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-scheduled-message-id.md",
+      "sourceSha256": "5eecf1b811670675d2ba0a68c01e9accdda2fa4a57ad59d2981b2b9d61dc6cd1"
+    },
+    {
+      "id": "get_v1-scheduled-message",
+      "group": "chat",
+      "method": "GET",
+      "path": "/chat/v1/scheduled-message",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-scheduled-message.md",
+      "sourceSha256": "f408d39b467f7b657e7922a95b030cc390e9d577bf1771a8026731786f79876d"
+    },
+    {
+      "id": "get_v1-send-chatbot-id",
+      "group": "chat",
+      "method": "GET",
+      "path": "/chat/v1/send/chatbot/{id}",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "sourceSha256": "6b2f9be45a65fa53b69d953ea5e965896582b221d0219c4846b79bd98be0ff39"
+    },
+    {
+      "id": "get_v1-send-message-id",
+      "group": "chat",
+      "method": "GET",
+      "path": "/chat/v1/send/message/{id}",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "sourceSha256": "e031f23af2441c3a5e7f440024ea14eaa813f6944356c6c9e5eb9e876ea0fc0f"
+    },
+    {
+      "id": "get_v1-send-otp-id",
+      "group": "chat",
+      "method": "GET",
+      "path": "/chat/v1/send/otp/{id}",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "sourceSha256": "e609ddd42ff970546444a2f8c0c2b335d3cf0ea026d8cfdd3e95398210de5422"
+    },
+    {
+      "id": "get_v1-sequence",
+      "group": "chat",
+      "method": "GET",
+      "path": "/chat/v1/sequence",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-sequence.md",
+      "sourceSha256": "f26e65269c1434f7d88c8c06351ee9f22f0f087d962ec6ad4aac7e81f4939892"
+    },
+    {
+      "id": "get_v1-session-id-message",
+      "group": "chat",
+      "method": "GET",
+      "path": "/chat/v1/session/{id}/message",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-session-id-message.md",
+      "sourceSha256": "194455ba0bad4bd2ae8796d632f978f9be889276bdf9b9b1a81d7376f0c6fea3"
+    },
+    {
+      "id": "get_v1-session-id-note",
+      "group": "chat",
+      "method": "GET",
+      "path": "/chat/v1/session/{id}/note",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-session-id-note.md",
+      "sourceSha256": "c1121077b7680f1ee3ccc263e94a021df7bcab396632e582ebfce347e1d724c1"
+    },
+    {
+      "id": "get_v1-session-note-id",
+      "group": "chat",
+      "method": "GET",
+      "path": "/chat/v1/session/note/{id}",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-session-note-id.md",
+      "sourceSha256": "cb37378960b891a7144e3a365a09776a3b6c41b31132a0755e50e801917c9360"
+    },
+    {
+      "id": "get_v1-tag-color",
+      "group": "core",
+      "method": "GET",
+      "path": "/core/v1/tag/color",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "sourceSha256": "ffc3b11a54d70fed5909d7e46e9f1e577f0f6be3b2703c8a37bd4464e8b7da86"
+    },
+    {
+      "id": "get_v1-tag",
+      "group": "core",
+      "method": "GET",
+      "path": "/core/v1/tag",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-tag.md",
+      "sourceSha256": "8395f4db469bcb4ce79b23ca9e5bab99d3cf16d3205af7fe346f385ec94f06f7"
+    },
+    {
+      "id": "get_v1-template",
+      "group": "chat",
+      "method": "GET",
+      "path": "/chat/v1/template",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-template.md",
+      "sourceSha256": "8bed99ff5f0486453f5be38e47ac31c5776bae6cd401ccaaa1b4c0da6d4384d3"
+    },
+    {
+      "id": "get_v1-webhook-event",
+      "group": "core",
+      "method": "GET",
+      "path": "/core/v1/webhook/event",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-webhook-event.md",
+      "sourceSha256": "1d16fee6e7d04dc8a3e790008697daa267cb08a980786d9902e66ef1f46cf422"
+    },
+    {
+      "id": "get_v1-webhook-subscription-subscriptionid",
+      "group": "core",
+      "method": "GET",
+      "path": "/core/v1/webhook/subscription/{subscriptionId}",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-webhook-subscription-subscriptionid.md",
+      "sourceSha256": "d0313b6d8381e5323f0259cd96d69da2ce38da731eea62878e39601c8f5caaeb"
+    },
+    {
+      "id": "get_v1-webhook-subscription",
+      "group": "core",
+      "method": "GET",
+      "path": "/core/v1/webhook/subscription",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-webhook-subscription.md",
+      "sourceSha256": "7dc2e2d60616fb4b42bc49f5dce5eaf06c2b3cb4d1c360b00422e2455be16629"
+    },
+    {
+      "id": "get_v2-department",
+      "group": "core",
+      "method": "GET",
+      "path": "/core/v2/department",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v2-department.md",
+      "sourceSha256": "e118a39bae928424128793dff5b2c0d78173d7063443cee6b8f3df15e1dce5b2"
+    },
+    {
+      "id": "get_v2-file",
+      "group": "core",
+      "method": "GET",
+      "path": "/core/v2/file",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v2-file.md",
+      "sourceSha256": "85c834b337ff6169242168c070c5b2d3cea2e038f2fb22dab9597d38a48d8ba5"
+    },
+    {
+      "id": "get_v2-panel-card-id",
+      "group": "crm",
+      "method": "GET",
+      "path": "/crm/v2/panel/card/{id}",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "sourceSha256": "d9951261ddfe05a8c212a03f5bf0d14d4cdafb6370aab4826a2f3a4f3c5a6770"
+    },
+    {
+      "id": "get_v2-panel-card",
+      "group": "crm",
+      "method": "GET",
+      "path": "/crm/v2/panel/card",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "sourceSha256": "9c73640ab6e361aceebad27d0c80ee29590b446fbe6480975ae09bd1c75b7633"
+    },
+    {
+      "id": "get_v2-panel",
+      "group": "crm",
+      "method": "GET",
+      "path": "/crm/v2/panel",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "sourceSha256": "7ddd608b4860f351d1e796ddd714d9ad0a2d1390d7b289081fefc392341d33ec"
+    },
+    {
+      "id": "get_v2-partner-billing-report",
+      "group": "core",
+      "method": "GET",
+      "path": "/core/v2/partner/billing/report",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "sourceSha256": "9ea108e291df0af06a0e47434720da41f5f0492e66c292b0720d032026339b8c"
+    },
+    {
+      "id": "get_v2-sequence-id-contact",
+      "group": "chat",
+      "method": "GET",
+      "path": "/chat/v2/sequence/{id}/contact",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "sourceSha256": "19ed13d5c2eacbe37874138d17766fed99afa73a2597e609058b9574ff2bd102"
+    },
+    {
+      "id": "get_v2-session-id",
+      "group": "chat",
+      "method": "GET",
+      "path": "/chat/v2/session/{id}",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "sourceSha256": "2e7bd747851c71bc43fa49f9ad7cf24eff494b9f2e60de1d32f19815f73ed491"
+    },
+    {
+      "id": "get_v2-session",
+      "group": "chat",
+      "method": "GET",
+      "path": "/chat/v2/session",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "sourceSha256": "51a321ba9e7c838105d60f45dafb2cd3518852b01ed3fe7cc275d73bdb337e35"
+    },
+    {
+      "id": "post_v1-agent-id-departments",
+      "group": "core",
+      "method": "POST",
+      "path": "/core/v1/agent/{id}/departments",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-agent-id-departments.md",
+      "sourceSha256": "b1909e8c5f0a394863dbdce88362ac3e4c9d527e26d7269d51b38c97e6271282"
+    },
+    {
+      "id": "post_v1-agent-id-logout",
+      "group": "core",
+      "method": "POST",
+      "path": "/core/v1/agent/{id}/logout",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-agent-id-logout.md",
+      "sourceSha256": "99dacf6e98bb7b9322b46004d23316f846c64d2c26ca8c119d63f4c0d13f9395"
+    },
+    {
+      "id": "post_v1-agent-id-status",
+      "group": "core",
+      "method": "POST",
+      "path": "/core/v1/agent/{id}/status",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-agent-id-status.md",
+      "sourceSha256": "0a17fb48cff15c82c22d9e2f59ba28a7e37a87984eb4bdf623d5063b2fcef18f"
+    },
+    {
+      "id": "post_v1-agent",
+      "group": "core",
+      "method": "POST",
+      "path": "/core/v1/agent",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-agent.md",
+      "sourceSha256": "9ddc19b33fb266e57a0b6f698cfde38d3997f97653834f30e81da0e9f7e65327"
+    },
+    {
+      "id": "post_v1-chatbot-send",
+      "group": "chat",
+      "method": "POST",
+      "path": "/chat/v1/chatbot/send",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-chatbot-send.md",
+      "sourceSha256": "cea07d520a7650a5e65f910c243f484cc53ff6a11f66c490aebef2bce708a47d"
+    },
+    {
+      "id": "post_v1-company-id-active",
+      "group": "core",
+      "method": "POST",
+      "path": "/core/v1/company/{id}/active",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-company-id-active.md",
+      "sourceSha256": "0fdc521ab9b0501790b059bf44af21dcbc93c1c3bc87cc7bbf5f963e36934ee9"
+    },
+    {
+      "id": "post_v1-company-id-tokens",
+      "group": "core",
+      "method": "POST",
+      "path": "/core/v1/company/{id}/tokens",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-company-id-tokens.md",
+      "sourceSha256": "3e6985120f6ba4f96dd9066b91539eccf7fca5a47bcaee8e8c5508a9603a3e19"
+    },
+    {
+      "id": "post_v1-company",
+      "group": "core",
+      "method": "POST",
+      "path": "/core/v1/company",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-company.md",
+      "sourceSha256": "60428f3122b9dec39c62efad47e8d37336bbb6fc5e576d560fdb72ffd305d6ed"
+    },
+    {
+      "id": "post_v1-contact-filter",
+      "group": "core",
+      "method": "POST",
+      "path": "/core/v1/contact/filter",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-contact-filter.md",
+      "sourceSha256": "7102cb38b291f925d01775c51e858faba5fc278494f0db0bd8fe96ac17d68313"
+    },
+    {
+      "id": "post_v1-contact-id-tags",
+      "group": "core",
+      "method": "POST",
+      "path": "/core/v1/contact/{id}/tags",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-contact-id-tags.md",
+      "sourceSha256": "d5bf9df8a8a5387ac880561d2fe3c2788696487496579d005a050b8ade131c35"
+    },
+    {
+      "id": "post_v1-contact-phonenumber-phone-tags",
+      "group": "core",
+      "method": "POST",
+      "path": "/core/v1/contact/phonenumber/{phone}/tags",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-contact-phonenumber-phone-tags.md",
+      "sourceSha256": "73dfdc9bbc92b78cf31568bf777817de1f033e76fee6fa35b5747b0e7ad2585f"
+    },
+    {
+      "id": "post_v1-contact",
+      "group": "core",
+      "method": "POST",
+      "path": "/core/v1/contact",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-contact.md",
+      "sourceSha256": "7a58dbac1ec9ecfdc5d86fa2dbf607918ad8b5fc60ada74e3e94b89f80e16442"
+    },
+    {
+      "id": "post_v1-department",
+      "group": "core",
+      "method": "POST",
+      "path": "/core/v1/department",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-department.md",
+      "sourceSha256": "502f455bf3c449a77af87f23e54c8bc9530b315292bd45c384e02dfc12fa7a34"
+    },
+    {
+      "id": "post_v1-message-send-sync",
+      "group": "chat",
+      "method": "POST",
+      "path": "/chat/v1/message/send-sync",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-message-send-sync.md",
+      "sourceSha256": "05afeb2dfac25a4b27b4fe018bed028bddf51184a870017607e4629b2ae323ca"
+    },
+    {
+      "id": "post_v1-message-send",
+      "group": "chat",
+      "method": "POST",
+      "path": "/chat/v1/message/send",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-message-send.md",
+      "sourceSha256": "0ade967598fe4b9052d422fb4c7ebd7cd31763817a5e4cd314372a4810e7cc88"
+    },
+    {
+      "id": "post_v1-panel-card-cardid-note",
+      "group": "crm",
+      "method": "POST",
+      "path": "/crm/v1/panel/card/{cardId}/note",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-panel-card-cardid-note.md",
+      "sourceSha256": "6ace6ff92ebd5afe6d14df27db18d10bebca1c944d38fcda7e728da77d129daf"
+    },
+    {
+      "id": "post_v1-portfolio-id-contact-batch",
+      "group": "core",
+      "method": "POST",
+      "path": "/core/v1/portfolio/{id}/contact/batch",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-portfolio-id-contact-batch.md",
+      "sourceSha256": "914a14af61bacee130a0fa1fdb30664252c35c5fd14368c985999237dce7cec4"
+    },
+    {
+      "id": "post_v1-portfolio-id-contact",
+      "group": "core",
+      "method": "POST",
+      "path": "/core/v1/portfolio/{id}/contact",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-portfolio-id-contact.md",
+      "sourceSha256": "a469666f24eede381521b7594bafc1cf13200fe0b0697267aa16c6ce8cf4662a"
+    },
+    {
+      "id": "post_v1-scheduled-message-batch-cancel",
+      "group": "chat",
+      "method": "POST",
+      "path": "/chat/v1/scheduled-message/batch-cancel",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-scheduled-message-batch-cancel.md",
+      "sourceSha256": "63cf31babaa405a1214b077f9bea031c3cc5c1a4090c99868f05c2e38ce6aa3d"
+    },
+    {
+      "id": "post_v1-scheduled-message-id-cancel",
+      "group": "chat",
+      "method": "POST",
+      "path": "/chat/v1/scheduled-message/{id}/cancel",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-scheduled-message-id-cancel.md",
+      "sourceSha256": "1c3d08ff117bf978dd7b2121c070baf685526e7b82e25a40fdc1c927d77eb7c7"
+    },
+    {
+      "id": "post_v1-scheduled-message",
+      "group": "chat",
+      "method": "POST",
+      "path": "/chat/v1/scheduled-message",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-scheduled-message.md",
+      "sourceSha256": "df891c7a163a871b97fa9a8f1055af3519effcc85cbb9d5cc0a65fefe0dc5aff"
+    },
+    {
+      "id": "post_v1-send-audio",
+      "group": "chat",
+      "method": "POST",
+      "path": "/chat/v1/send/audio",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "sourceSha256": "0e8e4c7ca9a2b9a150f61ea1f087a9ef3c0b0e520cce7bb0a71915f41220f0d6"
+    },
+    {
+      "id": "post_v1-send-chatbot-batch",
+      "group": "chat",
+      "method": "POST",
+      "path": "/chat/v1/send/chatbot/batch",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "sourceSha256": "9b167e9de3bb79c0f6e58fa9f8fb11b404affde84762976eeeeec719b38d0436"
+    },
+    {
+      "id": "post_v1-send-chatbot",
+      "group": "chat",
+      "method": "POST",
+      "path": "/chat/v1/send/chatbot",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "sourceSha256": "765eb7442012fbb089cf649a9c9958f13d5207685ed8d1c6a56a2453d4673d19"
+    },
+    {
+      "id": "post_v1-send-document",
+      "group": "chat",
+      "method": "POST",
+      "path": "/chat/v1/send/document",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "sourceSha256": "6db0da41391ccda3a16f32155d63a13ce45e03ee394e3c988918354110d1de91"
+    },
+    {
+      "id": "post_v1-send-image",
+      "group": "chat",
+      "method": "POST",
+      "path": "/chat/v1/send/image",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "sourceSha256": "ab0e329aef53a186581180b29f4d21aa7e816d49ff5e3eee110f0147b1d08ba8"
+    },
+    {
+      "id": "post_v1-send-otp",
+      "group": "chat",
+      "method": "POST",
+      "path": "/chat/v1/send/otp",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "sourceSha256": "1878f1374002f97a522e14bf7401b0e4b95147dfc14904a6572d8f1a0f1bfe16"
+    },
+    {
+      "id": "post_v1-send-template-batch",
+      "group": "chat",
+      "method": "POST",
+      "path": "/chat/v1/send/template/batch",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "sourceSha256": "8826b6e29430c16cdcda01d22d5f88787f5f05da04d839a5c54d393be2445138"
+    },
+    {
+      "id": "post_v1-send-template",
+      "group": "chat",
+      "method": "POST",
+      "path": "/chat/v1/send/template",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "sourceSha256": "7a217fbe7ba64202e3042697823c1f5df2e3c49f2cd3e6561879b65465eae643"
+    },
+    {
+      "id": "post_v1-send-text",
+      "group": "chat",
+      "method": "POST",
+      "path": "/chat/v1/send/text",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "sourceSha256": "b2e69cd6291e7e981fde77286cbf2d37bd984c2f220a805261011d4b4defd621"
+    },
+    {
+      "id": "post_v1-send-typing",
+      "group": "chat",
+      "method": "POST",
+      "path": "/chat/v1/send/typing",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "sourceSha256": "2d74d032d49f6704cb83fbc80e9a8ae65ee1216e9302fd6f7c0e6c93929cecdf"
+    },
+    {
+      "id": "post_v1-send-video",
+      "group": "chat",
+      "method": "POST",
+      "path": "/chat/v1/send/video",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "sourceSha256": "17a93603760cc9edba44a15b72ad480c3dbab7607e1f4062111107a91b5f8d23"
+    },
+    {
+      "id": "post_v1-sequence-id-contact-batch",
+      "group": "chat",
+      "method": "POST",
+      "path": "/chat/v1/sequence/{id}/contact/batch",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-sequence-id-contact-batch.md",
+      "sourceSha256": "19cfdcae4214a9363c0097b6c6e424d6018185d2eaed47d3c3f65b5078f6df53"
+    },
+    {
+      "id": "post_v1-sequence-id-contact",
+      "group": "chat",
+      "method": "POST",
+      "path": "/chat/v1/sequence/{id}/contact",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-sequence-id-contact.md",
+      "sourceSha256": "22ee51ddc1823c4feaeb557216133fd5d2353598feba7515722224199fa3733c"
+    },
+    {
+      "id": "post_v1-session-id-message-sync",
+      "group": "chat",
+      "method": "POST",
+      "path": "/chat/v1/session/{id}/message/sync",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-session-id-message-sync.md",
+      "sourceSha256": "a2d32c78e5552e41dc15759581d6c96a291edb483f22035aee24bc54066bf45e"
+    },
+    {
+      "id": "post_v1-session-id-message",
+      "group": "chat",
+      "method": "POST",
+      "path": "/chat/v1/session/{id}/message",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-session-id-message.md",
+      "sourceSha256": "a2dcc6abff1a336685218380d143c3cd5f808c19b26c95801ba81364b0f45ad9"
+    },
+    {
+      "id": "post_v1-session-id-note",
+      "group": "chat",
+      "method": "POST",
+      "path": "/chat/v1/session/{id}/note",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-session-id-note.md",
+      "sourceSha256": "3c32269731b95fcf22788185a041f3605f4e2acdafc2486f62db0c513410cee5"
+    },
+    {
+      "id": "post_v1-tag",
+      "group": "core",
+      "method": "POST",
+      "path": "/core/v1/tag",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "sourceSha256": "9bd5af11ca8c9ac6f003de82e40a03c5428738b4a96e65a06cd42ac5bf8d66e5"
+    },
+    {
+      "id": "post_v1-webhook-subscription",
+      "group": "core",
+      "method": "POST",
+      "path": "/core/v1/webhook/subscription",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-webhook-subscription.md",
+      "sourceSha256": "37580bf9cea8c403c7283e674c186e5b4436cef71b29dcd431bc017545c7e7ab"
+    },
+    {
+      "id": "post_v2-contact-batch",
+      "group": "core",
+      "method": "POST",
+      "path": "/core/v2/contact/batch",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v2-contact-batch.md",
+      "sourceSha256": "46c380277e13d129c12e79dd7cc7e4dae1458dd8144e6a91e3e14b49a2adaa69"
+    },
+    {
+      "id": "post_v2-file",
+      "group": "core",
+      "method": "POST",
+      "path": "/core/v2/file",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v2-file.md",
+      "sourceSha256": "d0b82dee6fe6616ed36162235b79e416824b28ff6df8f0b7b17006b0b5e34e74"
+    },
+    {
+      "id": "post_v2-panel-card-id-duplicate",
+      "group": "crm",
+      "method": "POST",
+      "path": "/crm/v2/panel/card/{id}/duplicate",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "sourceSha256": "6b2242026ab27a8ffbb30963067f4a5ab471547673432f90482a9ef5f9630a11"
+    },
+    {
+      "id": "post_v2-panel-card",
+      "group": "crm",
+      "method": "POST",
+      "path": "/crm/v2/panel/card",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "sourceSha256": "98cf927a779879debe4a7141a923ac84565bca99981e2cfd08eafc0522bc7dd1"
+    },
+    {
+      "id": "put_v1-agent-id",
+      "group": "core",
+      "method": "PUT",
+      "path": "/core/v1/agent/{id}",
+      "documentationUrl": "https://infinitegear.readme.io/reference/put_v1-agent-id.md",
+      "sourceSha256": "96f044d796794dcdef92e46e39e0723ccd89a900734b4cc0fb08c76cc403ab09"
+    },
+    {
+      "id": "put_v1-company-id",
+      "group": "core",
+      "method": "PUT",
+      "path": "/core/v1/company/{id}",
+      "documentationUrl": "https://infinitegear.readme.io/reference/put_v1-company-id.md",
+      "sourceSha256": "6ab64065211099b19ff433f583c5292954c1e3415ad3ffdc80c7625808e493c3"
+    },
+    {
+      "id": "put_v1-contact-phonenumber-phone",
+      "group": "core",
+      "method": "PUT",
+      "path": "/core/v1/contact/phonenumber/{phone}",
+      "documentationUrl": "https://infinitegear.readme.io/reference/put_v1-contact-phonenumber-phone.md",
+      "sourceSha256": "578a075d7bb5801b0a1569e50ec91932656b8ecd5407d33179c9d8b201a9212b"
+    },
+    {
+      "id": "put_v1-department-id-agents",
+      "group": "core",
+      "method": "PUT",
+      "path": "/core/v1/department/{id}/agents",
+      "documentationUrl": "https://infinitegear.readme.io/reference/put_v1-department-id-agents.md",
+      "sourceSha256": "e4998d56ed2a51ce1dd56313ffbad9ba09d469da8ce48cf2110413e8e3399638"
+    },
+    {
+      "id": "put_v1-department-id",
+      "group": "core",
+      "method": "PUT",
+      "path": "/core/v1/department/{id}",
+      "documentationUrl": "https://infinitegear.readme.io/reference/put_v1-department-id.md",
+      "sourceSha256": "86cc340b0392af82e954d8226bcb7669f03c1ab7eadaf106f773b681d7d7addd"
+    },
+    {
+      "id": "put_v1-scheduled-message-id",
+      "group": "chat",
+      "method": "PUT",
+      "path": "/chat/v1/scheduled-message/{id}",
+      "documentationUrl": "https://infinitegear.readme.io/reference/put_v1-scheduled-message-id.md",
+      "sourceSha256": "48f9b734a67d49049586eb08f47ef71f8611b999a2890494d67b83551d04638b"
+    },
+    {
+      "id": "put_v1-session-id-assignee",
+      "group": "chat",
+      "method": "PUT",
+      "path": "/chat/v1/session/{id}/assignee",
+      "documentationUrl": "https://infinitegear.readme.io/reference/put_v1-session-id-assignee.md",
+      "sourceSha256": "880207681068279a910378ccb12de647b49be4afabacea2bfa40986a279d79bd"
+    },
+    {
+      "id": "put_v1-session-id-complete",
+      "group": "chat",
+      "method": "PUT",
+      "path": "/chat/v1/session/{id}/complete",
+      "documentationUrl": "https://infinitegear.readme.io/reference/put_v1-session-id-complete.md",
+      "sourceSha256": "7abfbe7e2e36163edf45e8ec92e9b8c21d963981f6444587354c076910f2f11a"
+    },
+    {
+      "id": "put_v1-session-id-status",
+      "group": "chat",
+      "method": "PUT",
+      "path": "/chat/v1/session/{id}/status",
+      "documentationUrl": "https://infinitegear.readme.io/reference/put_v1-session-id-status.md",
+      "sourceSha256": "6c18feca580cc29a37dd63a0d0073bb7ac5dfc7bfeeb533a125b6bef3b80ef6c"
+    },
+    {
+      "id": "put_v1-session-id-transfer",
+      "group": "chat",
+      "method": "PUT",
+      "path": "/chat/v1/session/{id}/transfer",
+      "documentationUrl": "https://infinitegear.readme.io/reference/put_v1-session-id-transfer.md",
+      "sourceSha256": "b2bbadf58109923d93fab2cf05fed733a88617d865afa095b92e037f273ff42f"
+    },
+    {
+      "id": "put_v1-tag-id",
+      "group": "core",
+      "method": "PUT",
+      "path": "/core/v1/tag/{id}",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "sourceSha256": "b33ae2b84c2e7d568e72f5cae73bc913c6e0270782c73d15a69d6b3cd14ed809"
+    },
+    {
+      "id": "put_v1-webhook-subscription-subscriptionid",
+      "group": "core",
+      "method": "PUT",
+      "path": "/core/v1/webhook/subscription/{subscriptionId}",
+      "documentationUrl": "https://infinitegear.readme.io/reference/put_v1-webhook-subscription-subscriptionid.md",
+      "sourceSha256": "df9331460f346c607d59a6f71e198362ed75bc2bfeb8a400c2e74cc340ef9b83"
+    },
+    {
+      "id": "put_v2-contact-id",
+      "group": "core",
+      "method": "PUT",
+      "path": "/core/v2/contact/{id}",
+      "documentationUrl": "https://infinitegear.readme.io/reference/put_v2-contact-id.md",
+      "sourceSha256": "92e35d1c6c063483f9f75ae3db4f2039fe77f00abb7f9c1be9e6f23949c5d096"
+    },
+    {
+      "id": "put_v2-session-id-partial",
+      "group": "chat",
+      "method": "PUT",
+      "path": "/chat/v2/session/{id}/partial",
+      "documentationUrl": "https://infinitegear.readme.io/reference/put_v2-session-id-partial.md",
+      "sourceSha256": "0760b2d8dd6f4528986f800b46cea844e769549a809158355f69e457707a5b5e"
+    },
+    {
+      "id": "put_v3-panel-card-id",
+      "group": "crm",
+      "method": "PUT",
+      "path": "/crm/v3/panel/card/{id}",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "sourceSha256": "700a441ef9af16aa1ca1f4595672037230e1dbdda9d2c791071c6f705886a467"
+    }
+  ]
+}

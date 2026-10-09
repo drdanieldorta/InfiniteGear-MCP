@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Conectar seu CRM · InfiniteGear</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/setup.css">
+  <script src="/setup.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Ir para a configuração</a>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#main" aria-label="InfiniteGear, início"><span class="brand-mark" aria-hidden="true">ig<span>→</span></span><span>InfiniteGear<span class="brand-subtitle">CRM conectado à sua IA</span></span></a>
+      <span class="local-badge"><span aria-hidden="true">●</span> No seu computador</span>
+    </header>
+
+    <main id="main">
+      <section class="introduction" aria-labelledby="page-title">
+        <p class="eyebrow">ASSISTENTE DE CONEXÃO</p>
+        <h1 id="page-title">Seu CRM.<br><span>Uma conversa de distância.</span></h1>
+        <p class="intro-description">Conecte o InfiniteGear ao seu aplicativo de IA em três passos. Você não precisa programar.</p>
+        <ol class="progress" aria-label="Etapas da configuração">
+          <li class="current" id="progress-connect"><span>1</span> Conecte a conta</li>
+          <li id="progress-save"><span>2</span> Salve com segurança</li>
+          <li id="progress-client"><span>3</span> Abra na sua IA</li>
+        </ol>
+      </section>
+
+      <div id="session-notice" class="notice notice-error" role="alert" hidden></div>
+      <div id="catalog-notice" class="notice notice-warning" role="status" aria-live="polite" hidden></div>
+      <noscript><p class="notice notice-error">Ative o JavaScript do navegador para usar este assistente.</p></noscript>
+
+      <div class="workspace">
+        <div class="setup-cards">
+          <section class="card" aria-labelledby="connect-title">
+            <div class="card-heading"><span class="step-number">01</span><div><h2 id="connect-title">Conecte sua conta</h2><p>O endereço já está pronto. Basta colar sua chave de acesso.</p></div></div>
+            <form id="connection-form" novalidate>
+              <div class="token-guide"><strong>Onde encontro minha chave?</strong><p>No InfiniteGear, abra <b>Ajustes → Integrações → Integração via API</b> e gere um <b>token permanente</b>. Se essa opção não aparecer, peça ajuda ao administrador da sua conta.</p></div>
+              <div class="field">
+                <label for="api-token">Chave de acesso à API <span class="required" id="token-required">obrigatória</span></label>
+                <div class="secret-field"><input type="password" id="api-token" name="apiToken" placeholder="Cole sua chave de acesso" autocomplete="off" spellcheck="false" aria-describedby="api-token-help" required><button type="button" class="reveal-button" data-reveal="api-token" aria-label="Mostrar chave de acesso" aria-pressed="false">Mostrar</button></div>
+                <p class="field-help" id="api-token-help">Cole somente o token, sem escrever “Bearer”. Ele fica salvo no arquivo de configuração deste computador.</p>
+              </div>
+              <details class="advanced" id="advanced-settings">
+                <summary>Opções avançadas: endereço e chave de parceiro</summary>
+                <div class="field advanced-field">
+                  <label for="api-url">Endereço da API</label>
+                  <input type="url" id="api-url" name="apiUrl" value="https://api.crm.infinitegear.app" placeholder="https://api.crm.infinitegear.app" autocomplete="url" spellcheck="false" aria-describedby="api-url-help" required>
+                  <p class="field-help" id="api-url-help">O endereço padrão do InfiniteGear já está preenchido. Altere somente se o administrador indicar outro endereço de API. O site da documentação não é um endereço de API.</p>
+                </div>
+                <div class="field advanced-field">
+                  <label for="partner-token">Chave de parceiro <span class="required">opcional</span></label>
+                  <div class="secret-field"><input type="password" id="partner-token" name="partnerToken" placeholder="Somente se o administrador fornecer" autocomplete="off" spellcheck="false" aria-describedby="partner-token-help"><button type="button" class="reveal-button" data-reveal="partner-token" aria-label="Mostrar chave de parceiro" aria-pressed="false">Mostrar</button></div>
+                  <p class="field-help" id="partner-token-help">Para administradores de parceiros: gere em Admin → Personalizar → Integração. Se já houver uma chave salva, deixar em branco mantém a chave atual.</p>
+                </div>
+              </details>
+              <button type="submit" class="button button-secondary" id="test-button">Testar conexão</button>
+              <p class="action-help">Este teste apenas consulta a API. Nenhum dado do CRM é alterado.</p>
+              <div id="connection-status" class="notice" role="status" aria-live="polite" hidden></div>
+            </form>
+          </section>
+
+          <section class="card" aria-labelledby="save-title">
+            <div class="card-heading"><span class="step-number">02</span><div><h2 id="save-title">Escolha o que sua IA pode fazer</h2><p>Você pode mudar essa opção quando quiser.</p></div></div>
+            <div class="permission-choice">
+              <div class="permission-icon" aria-hidden="true">✓</div>
+              <div><h3>Comece apenas com consultas</h3><p id="permission-description">Com a conexão verificada, a IA poderá consultar seus dados. Criar, editar, excluir e enviar mensagens fica bloqueado por padrão.</p><span class="recommended">RECOMENDADO PARA COMEÇAR</span></div>
+            </div>
+            <label class="checkbox-label" for="allow-writes"><input type="checkbox" id="allow-writes"><span>Também permitir alterações no CRM<small>Ative somente se quiser que a IA possa criar, editar ou excluir informações quando você pedir.</small></span></label>
+            <button type="button" class="button button-primary" id="save-button">Salvar configuração <span aria-hidden="true">→</span></button>
+            <div id="save-status" class="notice" role="status" aria-live="polite" hidden></div>
+          </section>
+
+          <section class="card client-card" aria-labelledby="client-title">
+            <div class="card-heading"><span class="step-number">03</span><div><h2 id="client-title">Leve o InfiniteGear para sua IA</h2><p>Copie a configuração abaixo e siga os passos do seu aplicativo.</p></div></div>
+            <div class="field"><label for="client-select">Qual aplicativo você usa?</label><select id="client-select"><option value="claude">Claude Desktop</option><option value="cursor">Cursor</option><option value="vscode">Visual Studio Code</option><option value="generic">Outro aplicativo compatível com MCP</option></select></div>
+            <div id="client-locked" class="notice notice-neutral">Salve sua configuração no passo 2 para preparar a conexão com seu aplicativo.</div>
+            <div id="client-ready" hidden>
+              <ol id="client-instructions" class="instruction-list"></ol>
+              <div class="code-panel"><div class="code-header"><span id="config-filename">Configuração MCP</span><button type="button" id="copy-button">Copiar configuração</button></div><pre tabindex="0" aria-label="Configuração JSON para copiar"><code id="client-config"></code></pre></div>
+              <p id="copy-status" class="field-help" role="status" aria-live="polite"></p>
+              <p class="field-help">Se o arquivo já tiver outras conexões, adicione apenas a entrada <strong>infinitegear</strong> dentro da seção indicada. Não apague suas outras configurações.</p>
+              <div class="try-it"><span aria-hidden="true">✦</span><div><strong id="try-it-title">Confira a conexão no seu aplicativo</strong><p id="try-it-description">Depois de reiniciar o aplicativo, peça para verificar o estado do conector InfiniteGear. Salvar as chaves não confirma o acesso ao CRM.</p></div></div>
+            </div>
+          </section>
+        </div>
+
+        <aside class="sidebar" aria-label="Ajuda para configurar">
+          <div class="help-card"><span class="help-icon" aria-hidden="true">↔</span><h2>O que é esse conector?</h2><p>O MCP é a ponte entre seu CRM e sua IA. Você continua usando o aplicativo de IA que já conhece; ele ganha acesso às ferramentas do InfiniteGear.</p><div class="connection-diagram" aria-label="Seu aplicativo de IA conecta ao InfiniteGear"><span>Sua IA</span><span aria-hidden="true">↔</span><span>InfiniteGear</span></div></div>
+          <div class="help-card subtle"><h2>Suas chaves ficam com você</h2><p>Este assistente funciona somente neste computador. Suas chaves não aparecem na configuração que você copia para o aplicativo de IA.</p><p class="small-copy">Os dados consultados serão enviados ao aplicativo de IA que você escolher, conforme as permissões da sua conta.</p></div>
+          <div class="help-card subtle"><h2>Pronto para a primeira consulta</h2><p>Depois de testar e conectar seu aplicativo de IA, experimente:</p><p class="example-prompt">“Liste até 5 contatos do meu InfiniteGear, sem alterar nada.”</p><a href="https://infinitegear.readme.io/" target="_blank" rel="noreferrer noopener">Abrir documentação <span aria-hidden="true">→</span></a></div>
+          <div class="local-file" id="local-file" hidden><span>CONFIGURAÇÃO SALVA EM</span><code id="config-path"></code></div>
+        </aside>
+      </div>
+    </main>
+    <footer><span>InfiniteGear MCP</span><p>Configurou tudo? Pode fechar esta página e encerrar o assistente com <kbd>Ctrl</kbd> + <kbd>C</kbd> no terminal. Seu aplicativo de IA inicia o conector quando precisar.</p></footer>
+  </div>
+</body>
+</html>

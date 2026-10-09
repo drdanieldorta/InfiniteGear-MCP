@@ -1,0 +1,1222 @@
+{
+  "brand": "InfiniteGear",
+  "source": "Índice de documentação fornecido no repositório",
+  "operations": 119,
+  "entries": [
+    {
+      "id": "getting-started-with-your-api",
+      "group": "Introdução",
+      "title": "Autenticação",
+      "description": "Entenda como autenticar suas requisições para utilizar a API da InfiniteGear.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/autenticação.md",
+      "method": null,
+      "schemaAvailable": false
+    },
+    {
+      "id": "paginação",
+      "group": "Introdução",
+      "title": "Paginação",
+      "description": "Entenda como a paginação nos endpoints de listagem funciona.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/paginação.md",
+      "method": null,
+      "schemaAvailable": false
+    },
+    {
+      "id": "rate-limiting",
+      "group": "Introdução",
+      "title": "Rate Limiting",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/rate-limit.md",
+      "method": null,
+      "schemaAvailable": false
+    },
+    {
+      "id": "login-integrado",
+      "group": "GUIAS",
+      "title": "Login integrado",
+      "description": "É possível integrar o login entre plataformas, gerando um token via API e direcionando o usuário",
+      "documentationUrl": "https://infinitegear.readme.io/reference/login-integrado.md",
+      "method": null,
+      "schemaAvailable": false
+    },
+    {
+      "id": "webhooks-1",
+      "group": "GUIAS",
+      "title": "Webhooks",
+      "description": "Entenda como receber eventos da InfiniteGear em outro sistema.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/webhooks.md",
+      "method": null,
+      "schemaAvailable": false
+    },
+    {
+      "id": "webhook-chatbot",
+      "group": "GUIAS",
+      "title": "Webhook no Chatbot",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/webhook-no-chatbot.md",
+      "method": null,
+      "schemaAvailable": false
+    },
+    {
+      "id": "rastreio-de-campanha-utm",
+      "group": "GUIAS",
+      "title": "Rastreio de campanha UTM",
+      "description": "Entenda como rastrear sua campanha utilizando padrões UTM",
+      "documentationUrl": "https://infinitegear.readme.io/reference/rastreio-de-campanha-utm.md",
+      "method": null,
+      "schemaAvailable": false
+    },
+    {
+      "id": "informações-para-firewall",
+      "group": "GUIAS",
+      "title": "Informações para Firewall",
+      "description": "Empresas que tem regras mais rígidas de firewall podem usar as informações abaixo para configurar suas regras",
+      "documentationUrl": "https://infinitegear.readme.io/reference/informações-para-firewall.md",
+      "method": null,
+      "schemaAvailable": false
+    },
+    {
+      "id": "configuração-do-assistente",
+      "group": "GUIAS",
+      "title": "1. Criar um assistente",
+      "description": "Neste primeiro passo vamos criar juntos um agente IA e configurar as primeiras etapas da integração com o assistente no N8N.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/1-criar-uma-chave-api.md",
+      "method": null,
+      "schemaAvailable": false
+    },
+    {
+      "id": "1-ler-textos",
+      "group": "GUIAS",
+      "title": "2. Criar o loop no chatbot",
+      "description": "Entenda como criar o modelo de chatbot e configurar o loop de modo que as mensagens enviadas não se percam e sejam sempre processadas por seu assistente.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/copy-of-1-criar-um-assistente.md",
+      "method": null,
+      "schemaAvailable": false
+    },
+    {
+      "id": "1-ler-textos-1",
+      "group": "GUIAS",
+      "title": "3. Como ler e responder textos",
+      "description": "Vamos adicionar a capacidade de ler e responder textos usando o ChatGPT.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/3-como-ler-e-responder-textos.md",
+      "method": null,
+      "schemaAvailable": false
+    },
+    {
+      "id": "2-processar-audios",
+      "group": "GUIAS",
+      "title": "4. Como processar áudios",
+      "description": "Nessa etapa vamos ensinar como adicionar a capacidade de processar áudios à sua IA.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/4-como-processar-áudios.md",
+      "method": null,
+      "schemaAvailable": false
+    },
+    {
+      "id": "2-ver-imagens",
+      "group": "GUIAS",
+      "title": "5. Como processar imagens",
+      "description": "Nessa etapa vamos ensinar como adicionar a capacidade de processar imagens à sua IA.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/5-como-processar-imagens.md",
+      "method": null,
+      "schemaAvailable": false
+    },
+    {
+      "id": "criar-token-de-integração",
+      "group": "GUIAS",
+      "title": "Criar token para integração",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/criar-token-para-integração.md",
+      "method": null,
+      "schemaAvailable": false
+    },
+    {
+      "id": "automações-via-n8n",
+      "group": "GUIAS",
+      "title": "N8N",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/makecom.md",
+      "method": null,
+      "schemaAvailable": false
+    },
+    {
+      "id": "makecom",
+      "group": "GUIAS",
+      "title": "Make.com",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/makecom.md",
+      "method": null,
+      "schemaAvailable": false
+    },
+    {
+      "id": "get_v2-file",
+      "group": "Core",
+      "title": "Obter url para upload",
+      "description": "Envie os metadados do arquivo e você receberá uma URL e deverá fazer upload para ela usando o método PUT<br /> Após enviar o conteúdo do arquivo, faça uma chamada para o endpont POST /core/v2/file",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v2-file.md",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v2-file",
+      "group": "Core",
+      "title": "Salvar arquivo",
+      "description": "Após o upload do arquivo na URL fornecida na rota GET /core/v2/file execute este metodo para obter o ID do arquivo<br />O Id do arquivo pode ser fornecido no envio de mensagens. <br /><br />O FileId…",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v2-file.md",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v1-custom-field",
+      "group": "Core",
+      "title": "Listar",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-custom-field.md",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v1-portfolio",
+      "group": "Core",
+      "title": "Listar",
+      "description": "Listagem paginada de carteiras.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-portfolio.md",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v1-portfolio-id-contact",
+      "group": "Core",
+      "title": "Listar contatos",
+      "description": "Listagem de contatos associados a uma carteira.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-portfolio-id-contact.md",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v1-portfolio-id-contact",
+      "group": "Core",
+      "title": "Adicionar contato",
+      "description": "Adicione um contato em uma carteira.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-portfolio-id-contact.md",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "delete_v1-portfolio-id-contact",
+      "group": "Core",
+      "title": "Remover contato",
+      "description": "Remova um contato de uma carteira.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/delete_v1-portfolio-id-contact.md",
+      "method": "DELETE",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v1-portfolio-id-contact-batch",
+      "group": "Core",
+      "title": "Adicionar contatos",
+      "description": "Adicione contatos em uma carteira adicionando um filtro.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-portfolio-id-contact-batch.md",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "delete_v1-portfolio-id-contact-batch",
+      "group": "Core",
+      "title": "Remover contatos",
+      "description": "Remova contatos de uma carteira adicionando um filtro.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/delete_v1-portfolio-id-contact-batch.md",
+      "method": "DELETE",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v1-company",
+      "group": "Core",
+      "title": "Listar",
+      "description": "Para autenticar nos endpoints de Gestão de Contas, utilize o Token de Parceiro.<br />O token pode ser gerado na plataforma em `Admin > Personalizar > Integração`.<br />Envie-o no header…",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-company.md",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v1-company",
+      "group": "Core",
+      "title": "Criar",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-company.md",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v1-company-id",
+      "group": "Core",
+      "title": "Obter por ID",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-company-id.md",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "put_v1-company-id",
+      "group": "Core",
+      "title": "Atualizar",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/put_v1-company-id.md",
+      "method": "PUT",
+      "schemaAvailable": true
+    },
+    {
+      "id": "delete_v1-company-id",
+      "group": "Core",
+      "title": "Excluir",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/delete_v1-company-id.md",
+      "method": "DELETE",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v1-company-id-active",
+      "group": "Core",
+      "title": "Ativar",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-company-id-active.md",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v1-company-id-tokens",
+      "group": "Core",
+      "title": "Listar tokens da conta",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-company-id-tokens.md",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v1-company-id-tokens",
+      "group": "Core",
+      "title": "Criar novo token",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-company-id-tokens.md",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "delete_v1-company-id-tokens-tokenid",
+      "group": "Core",
+      "title": "Remover token",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/delete_v1-company-id-tokens-tokenid.md",
+      "method": "DELETE",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v1-contact",
+      "group": "Core",
+      "title": "Listar",
+      "description": "Listagem paginada de contatos. Para resultados mais específicos, utilize o endpoint `/filter`.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-contact.md",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v1-contact",
+      "group": "Core",
+      "title": "Criar",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-contact.md",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v1-contact-filter",
+      "group": "Core",
+      "title": "Filtrar",
+      "description": "Filtragem paginada de contatos.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-contact-filter.md",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v1-contact-phonenumber-phone",
+      "group": "Core",
+      "title": "Obter por Número de telefone",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-contact-phonenumber-phone.md",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "put_v1-contact-phonenumber-phone",
+      "group": "Core",
+      "title": "Atualizar por Número de telefone",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/put_v1-contact-phonenumber-phone.md",
+      "method": "PUT",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v1-contact-id",
+      "group": "Core",
+      "title": "Obter por ID",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-contact-id.md",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "put_v2-contact-id",
+      "group": "Core",
+      "title": "Atualizar",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/put_v2-contact-id.md",
+      "method": "PUT",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v1-contact-phonenumber-phone-tags",
+      "group": "Core",
+      "title": "Atualizar etiquetas por Número de telefone",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-contact-phonenumber-phone-tags.md",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v1-contact-id-tags",
+      "group": "Core",
+      "title": "Atualizar etiquetas",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-contact-id-tags.md",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v2-contact-batch",
+      "group": "Core",
+      "title": "Salvar em massa",
+      "description": "Permite salvar até 100 contatos em uma única requisição.<br />Se um contato com o mesmo número de telefone, Instagram ou endereço de email já existir, este apenas será atualizado.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v2-contact-batch.md",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v1-contact-custom-field",
+      "group": "Core",
+      "title": "Campos personalizados",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-contact-custom-field.md",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v1-department",
+      "group": "Core",
+      "title": "Criar",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-department.md",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v2-department",
+      "group": "Core",
+      "title": "Listar",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v2-department.md",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v1-department-id",
+      "group": "Core",
+      "title": "Obter por ID",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-department-id.md",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "put_v1-department-id",
+      "group": "Core",
+      "title": "Atualizar",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/put_v1-department-id.md",
+      "method": "PUT",
+      "schemaAvailable": true
+    },
+    {
+      "id": "delete_v1-department-id",
+      "group": "Core",
+      "title": "Excluir",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/delete_v1-department-id.md",
+      "method": "DELETE",
+      "schemaAvailable": true
+    },
+    {
+      "id": "put_v1-department-id-agents",
+      "group": "Core",
+      "title": "Atualizar usuários",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/put_v1-department-id-agents.md",
+      "method": "PUT",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v1-department-id-channel",
+      "group": "Core",
+      "title": "Listar canais",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-department-id-channel.md",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v1-tag",
+      "group": "Core",
+      "title": "Listar",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-tag.md",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v1-tag",
+      "group": "Core",
+      "title": "Criar",
+      "description": "Cria uma etiqueta na conta. A cor define automaticamente a cor do texto; quando omitida, a etiqueta é criada em `GRAY_600`.",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v1-tag-color",
+      "group": "Core",
+      "title": "Listar cores",
+      "description": "Listagem das cores disponíveis para etiquetas. O valor de `color` é o que deve ser informado na criação e na atualização.",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "put_v1-tag-id",
+      "group": "Core",
+      "title": "Atualizar",
+      "description": "Atualiza o nome e a cor de uma etiqueta. Quando a cor é omitida, a cor atual é mantida.",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "method": "PUT",
+      "schemaAvailable": true
+    },
+    {
+      "id": "delete_v1-tag-id",
+      "group": "Core",
+      "title": "Excluir",
+      "description": "Exclui uma etiqueta. Quando a etiqueta estiver vinculada a contatos, a exclusão é recusada até que seja",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "method": "DELETE",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v1-company-officehours",
+      "group": "Core",
+      "title": "Obter",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v2-partner-billing-report",
+      "group": "Core",
+      "title": "Relatório de faturamento",
+      "description": "Para autenticar nos endpoints de Parceiros, utilize o Token de Parceiro.<br />O token pode ser gerado na plataforma em `Admin > Personalizar > Integração`.<br />Envie-o no header `Authorization` com…",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v1-agent",
+      "group": "Core",
+      "title": "Listar",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-agent.md",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v1-agent",
+      "group": "Core",
+      "title": "Criar",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-agent.md",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v1-agent-id",
+      "group": "Core",
+      "title": "Obter por ID",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-agent-id.md",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "put_v1-agent-id",
+      "group": "Core",
+      "title": "Atualizar",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/put_v1-agent-id.md",
+      "method": "PUT",
+      "schemaAvailable": true
+    },
+    {
+      "id": "delete_v1-agent-id",
+      "group": "Core",
+      "title": "Excluir",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/delete_v1-agent-id.md",
+      "method": "DELETE",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v1-agent-id-departments",
+      "group": "Core",
+      "title": "Atualizar equipes",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-agent-id-departments.md",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v1-agent-id-status",
+      "group": "Core",
+      "title": "Alterar status",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-agent-id-status.md",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v1-agent-id-logout",
+      "group": "Core",
+      "title": "Fazer logout",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-agent-id-logout.md",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v1-webhook-event",
+      "group": "Core",
+      "title": "Listar eventos",
+      "description": "Listagem dos eventos de webhook que podem ser assinados.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-webhook-event.md",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v1-webhook-subscription",
+      "group": "Core",
+      "title": "Listar assinaturas",
+      "description": "Listagem das assinaturas de webhook ativas e inativas.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-webhook-subscription.md",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v1-webhook-subscription",
+      "group": "Core",
+      "title": "Cria assinatura",
+      "description": "Cria assinatura de webhook.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-webhook-subscription.md",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v1-webhook-subscription-subscriptionid",
+      "group": "Core",
+      "title": "Busca assinatura por ID",
+      "description": "Busca assinatura de webhook através do ID.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-webhook-subscription-subscriptionid.md",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "put_v1-webhook-subscription-subscriptionid",
+      "group": "Core",
+      "title": "Atualiza assinatura",
+      "description": "Atualiza assinatura de webhook.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/put_v1-webhook-subscription-subscriptionid.md",
+      "method": "PUT",
+      "schemaAvailable": true
+    },
+    {
+      "id": "delete_v1-webhook-subscription-subscriptionid",
+      "group": "Core",
+      "title": "Remove assinatura",
+      "description": "Remove assinatura de webhook.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/delete_v1-webhook-subscription-subscriptionid.md",
+      "method": "DELETE",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v1-channel",
+      "group": "Chat",
+      "title": "Listar",
+      "description": "Listagem de canais de atendimento.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-channel.md",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v1-chatbot",
+      "group": "Chat",
+      "title": "Listar",
+      "description": "Listagem de chatbots.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-chatbot.md",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v1-chatbot-send",
+      "group": "Chat",
+      "title": "Enviar chatbot",
+      "description": "Permite iniciar a execução de um chatbot.<br />Durante a execução do chatbot, a interação com a conversa fica desabilitada para atendentes na central de atendimento.<br />A execução pode ser…",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-chatbot-send.md",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v2-session",
+      "group": "Chat",
+      "title": "Listar",
+      "description": "Listagem paginada de conversas.",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v2-session-id",
+      "group": "Chat",
+      "title": "Obter por ID",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "put_v1-session-id-transfer",
+      "group": "Chat",
+      "title": "Transferir",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/put_v1-session-id-transfer.md",
+      "method": "PUT",
+      "schemaAvailable": true
+    },
+    {
+      "id": "put_v1-session-id-assignee",
+      "group": "Chat",
+      "title": "Atribuir usuário",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/put_v1-session-id-assignee.md",
+      "method": "PUT",
+      "schemaAvailable": true
+    },
+    {
+      "id": "put_v1-session-id-complete",
+      "group": "Chat",
+      "title": "Concluir",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/put_v1-session-id-complete.md",
+      "method": "PUT",
+      "schemaAvailable": true
+    },
+    {
+      "id": "put_v1-session-id-status",
+      "group": "Chat",
+      "title": "Alterar status",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/put_v1-session-id-status.md",
+      "method": "PUT",
+      "schemaAvailable": true
+    },
+    {
+      "id": "put_v2-session-id-partial",
+      "group": "Chat",
+      "title": "Alterar",
+      "description": "Atualiza um ou mais atributos de uma conversa. Para usar você deve informar o novo valor do atribuito e quais atributos serão atualizados.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/put_v2-session-id-partial.md",
+      "method": "PUT",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v1-session-id-message",
+      "group": "Chat",
+      "title": "Listar mensagens",
+      "description": "Listagem paginada de mensagens por ID de uma conversa.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-session-id-message.md",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v1-session-id-message",
+      "group": "Chat",
+      "title": "Enviar mensagem",
+      "description": "Este endpoint segue as mesmas regras do canal de atendimento, por exemplo: uma conversa só pode ser iniciada no WhatsApp utilizando um modelo de mensagem.<br />Caso o contato não esteja cadastrado,…",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-session-id-message.md",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v1-session-id-message-sync",
+      "group": "Chat",
+      "title": "Enviar mensagem síncrona",
+      "description": "Este endpoint segue as mesmas regras do canal de atendimento, por exemplo: uma conversa só pode ser iniciada no WhatsApp utilizando um modelo de mensagem.<br />Caso o contato não esteja cadastrado,…",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-session-id-message-sync.md",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v1-session-id-note",
+      "group": "Chat",
+      "title": "Salvar nota interna",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-session-id-note.md",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v1-session-id-note",
+      "group": "Chat",
+      "title": "Listar notas internas",
+      "description": "Este endpoint permite a listagem de notas internas de um atendimento.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-session-id-note.md",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v1-session-note-id",
+      "group": "Chat",
+      "title": "Obter uma nota interna",
+      "description": "Este endpoint permite a obtenção de uma nota interna por meio de seu ID.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-session-note-id.md",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "delete_v1-session-note-id",
+      "group": "Chat",
+      "title": "Excluir uma nota interna",
+      "description": "Este endpoint permite a exclusão de uma nota interna por meio de seu ID.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/delete_v1-session-note-id.md",
+      "method": "DELETE",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v1-send-otp",
+      "group": "Chat",
+      "title": "OTP",
+      "description": "Envia uma senha OTP para um contato no WhatsApp.",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v1-send-otp-id",
+      "group": "Chat",
+      "title": "OTP status",
+      "description": "Consulta o status atual de uma mensagem OTP enviada anteriormente.",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v1-send-text",
+      "group": "Chat",
+      "title": "Texto",
+      "description": "Envia uma mensagem de texto simples para um contato.",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v1-send-audio",
+      "group": "Chat",
+      "title": "Áudio",
+      "description": "Envia uma mensagem de áudio para um contato.",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v1-send-video",
+      "group": "Chat",
+      "title": "Vídeo",
+      "description": "Envia uma mensagem de vídeo para um contato.",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v1-send-image",
+      "group": "Chat",
+      "title": "Imagem",
+      "description": "Envia uma mensagem de imagem para um contato.",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v1-send-document",
+      "group": "Chat",
+      "title": "Documento",
+      "description": "Envia uma mensagem de documento para um contato.",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v1-send-template",
+      "group": "Chat",
+      "title": "Modelo",
+      "description": "Envia um modelo de mensagem para um único destinatário.",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v1-send-template-batch",
+      "group": "Chat",
+      "title": "Modelo (em lote)",
+      "description": "Envia um modelo de mensagem para múltiplos destinatários em uma única requisição.",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v1-send-message-id",
+      "group": "Chat",
+      "title": "Mensagem status",
+      "description": "Consulta o status atual de uma mensagem enviada anteriormente pelos endpoints de envio.",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v1-send-typing",
+      "group": "Chat",
+      "title": "Digitando",
+      "description": "Envia o indicador de \"digitando\" para o contato da conversa informada.",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v1-send-chatbot",
+      "group": "Chat",
+      "title": "Chatbot",
+      "description": "Enfileira o disparo de um chatbot para um contato.<br />",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v1-send-chatbot-batch",
+      "group": "Chat",
+      "title": "Chatbot (em lote)",
+      "description": "Enfileira o disparo de um chatbot para múltiplos contatos em uma única requisição.<br />",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v1-send-chatbot-id",
+      "group": "Chat",
+      "title": "Chatbot status",
+      "description": "Consulta o status atual de um disparo de chatbot enfileirado anteriormente pelos endpoints de envio.<br />",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v1-message-send",
+      "group": "Chat",
+      "title": "Enviar",
+      "description": "Este endpoint segue as mesmas regras do canal de atendimento, por exemplo: uma conversa só pode ser iniciada no WhatsApp utilizando um modelo de mensagem.<br />Caso o contato não esteja cadastrado,…",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-message-send.md",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v1-message-send-sync",
+      "group": "Chat",
+      "title": "Enviar síncrono",
+      "description": "Este endpoint segue as mesmas regras do canal de atendimento, por exemplo: uma conversa só pode ser iniciada no WhatsApp utilizando um modelo de mensagem.<br />Caso o contato não esteja cadastrado,…",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-message-send-sync.md",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v1-message-id",
+      "group": "Chat",
+      "title": "Obter por ID",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-message-id.md",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v1-message-id-status",
+      "group": "Chat",
+      "title": "Obter status por ID",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-message-id-status.md",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "delete_v1-message-id",
+      "group": "Chat",
+      "title": "Excluir mensagem",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/delete_v1-message-id.md",
+      "method": "DELETE",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v1-message",
+      "group": "Chat",
+      "title": "Listar",
+      "description": "Listagem paginada de mensagens por ID de uma conversa.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-message.md",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v1-scheduled-message",
+      "group": "Chat",
+      "title": "Listar",
+      "description": "Listagem paginada de mensagens agendadas com filtros opcionais.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-scheduled-message.md",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v1-scheduled-message",
+      "group": "Chat",
+      "title": "Criar",
+      "description": "Cria uma nova mensagem agendada com os dados fornecidos.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-scheduled-message.md",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v1-scheduled-message-id",
+      "group": "Chat",
+      "title": "Obter por ID",
+      "description": "Retorna os detalhes de uma mensagem agendada específica.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-scheduled-message-id.md",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "put_v1-scheduled-message-id",
+      "group": "Chat",
+      "title": "Atualizar",
+      "description": "Atualiza uma mensagem agendada existente. Mensagens já enviadas não podem ser editadas.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/put_v1-scheduled-message-id.md",
+      "method": "PUT",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v1-scheduled-message-id-cancel",
+      "group": "Chat",
+      "title": "Cancelar",
+      "description": "Cancela uma mensagem agendada específica. Apenas mensagens com status agendado podem ser canceladas.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-scheduled-message-id-cancel.md",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v1-scheduled-message-batch-cancel",
+      "group": "Chat",
+      "title": "Cancelar em massa",
+      "description": "Cancela em massa mensagens agendadas. Apenas mensagens com status agendado podem ser canceladas.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-scheduled-message-batch-cancel.md",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v1-template",
+      "group": "Chat",
+      "title": "Listar",
+      "description": "Listagem paginada de modelos de mensagem.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-template.md",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v1-sequence",
+      "group": "Chat",
+      "title": "Listar",
+      "description": "Listagem paginada de sequências.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-sequence.md",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v2-sequence-id-contact",
+      "group": "Chat",
+      "title": "Listar contatos",
+      "description": "Listagem paginada de contatos da sequência.",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v1-sequence-id-contact",
+      "group": "Chat",
+      "title": "Adicionar contato",
+      "description": "Adicione um contato em uma sequência.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-sequence-id-contact.md",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "delete_v1-sequence-id-contact",
+      "group": "Chat",
+      "title": "Remover contato",
+      "description": "Remova um contato de uma sequência.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/delete_v1-sequence-id-contact.md",
+      "method": "DELETE",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v1-sequence-id-contact-batch",
+      "group": "Chat",
+      "title": "Adicionar contatos",
+      "description": "Adicione contatos em uma sequência adicionando um filtro.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-sequence-id-contact-batch.md",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "delete_v1-sequence-id-contact-batch",
+      "group": "Chat",
+      "title": "Remover contatos",
+      "description": "Remova contatos de uma sequência adicionando um filtro.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/delete_v1-sequence-id-contact-batch.md",
+      "method": "DELETE",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v2-panel-card",
+      "group": "Crm",
+      "title": "Listar",
+      "description": "Listagem paginada de cards.",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v2-panel-card",
+      "group": "Crm",
+      "title": "Criar",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v2-panel-card-id",
+      "group": "Crm",
+      "title": "Obter por ID",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "put_v3-panel-card-id",
+      "group": "Crm",
+      "title": "Atualizar",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "method": "PUT",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v2-panel-card-id-duplicate",
+      "group": "Crm",
+      "title": "Duplicar",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v1-panel-card-cardid-note",
+      "group": "Crm",
+      "title": "Listar anotações",
+      "description": "Listagem paginada de anotações.",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-panel-card-cardid-note.md",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "post_v1-panel-card-cardid-note",
+      "group": "Crm",
+      "title": "Adicionar anotação",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/post_v1-panel-card-cardid-note.md",
+      "method": "POST",
+      "schemaAvailable": true
+    },
+    {
+      "id": "delete_v1-panel-card-cardid-note-noteid",
+      "group": "Crm",
+      "title": "Remover anotação",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/delete_v1-panel-card-cardid-note-noteid.md",
+      "method": "DELETE",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v2-panel",
+      "group": "Crm",
+      "title": "Listar painéis",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v1-panel-id",
+      "group": "Crm",
+      "title": "Obter por ID",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-panel-id.md",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v1-panel-id-custom-fields",
+      "group": "Crm",
+      "title": "Campos personalizados",
+      "description": "",
+      "documentationUrl": "https://infinitegear.readme.io/reference/get_v1-panel-id-custom-fields.md",
+      "method": "GET",
+      "schemaAvailable": true
+    },
+    {
+      "id": "get_v1-panel-id-lost-reason",
+      "group": "Crm",
+      "title": "Listar motivos de perda",
+      "description": "Listagem paginada de motivos de perda do painel.",
+      "documentationUrl": "https://infinitegear.readme.io/reference",
+      "method": "GET",
+      "schemaAvailable": true
+    }
+  ]
+}

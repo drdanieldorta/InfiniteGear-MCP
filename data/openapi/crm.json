@@ -1,0 +1,2665 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "InfiniteGear CRM",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.crm.infinitegear.app/crm"
+    }
+  ],
+  "paths": {
+    "/v1/panel/card/{cardId}/note/{noteId}": {
+      "delete": {
+        "tags": [
+          "Cards"
+        ],
+        "summary": "Cards · Remover anotação",
+        "parameters": [
+          {
+            "name": "cardId",
+            "in": "path",
+            "description": "ID do card.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "noteId",
+            "in": "path",
+            "description": "ID da anotação.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalException"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ],
+        "operationId": "crm_delete_v1-panel-card-cardid-note-noteid",
+        "x-infinitegear-index-slug": "delete_v1-panel-card-cardid-note-noteid",
+        "x-infinitegear-documentation-url": "https://infinitegear.readme.io/reference/delete_v1-panel-card-cardid-note-noteid.md"
+      }
+    },
+    "/v1/panel/card/{cardId}/note": {
+      "get": {
+        "tags": [
+          "Cards"
+        ],
+        "summary": "Cards · Listar anotações",
+        "description": "Listagem paginada de anotações.",
+        "parameters": [
+          {
+            "name": "cardId",
+            "in": "path",
+            "description": "ID do card.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "PageNumber",
+            "in": "query",
+            "description": "Número da página a ser obtida.",
+            "schema": {
+              "maximum": 2147483647,
+              "minimum": 0,
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "description": "Tamanho da página a ser obtida.",
+            "schema": {
+              "maximum": 100,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int32",
+              "default": 15
+            }
+          },
+          {
+            "name": "OrderBy",
+            "in": "query",
+            "description": "Nome do campo para ser utilizado como pivô da ordenação.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "OrderDirection",
+            "in": "query",
+            "description": "Determina se a ordenação deve ser crescente ou decrescente.",
+            "schema": {
+              "enum": [
+                "ASCENDING",
+                "DESCENDING"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "CreatedAt.Before",
+            "in": "query",
+            "description": "Limite superior de busca, sempre em fuso horário UTM.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "CreatedAt.After",
+            "in": "query",
+            "description": "Limite inferior de busca, sempre em fuso horário UTM.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "UpdatedAt.Before",
+            "in": "query",
+            "description": "Limite superior de busca, sempre em fuso horário UTM.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "UpdatedAt.After",
+            "in": "query",
+            "description": "Limite inferior de busca, sempre em fuso horário UTM.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PublicPanelCardNoteDTOPublicPageListDTO"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalException"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ],
+        "operationId": "crm_get_v1-panel-card-cardid-note",
+        "x-infinitegear-index-slug": "get_v1-panel-card-cardid-note",
+        "x-infinitegear-documentation-url": "https://infinitegear.readme.io/reference/get_v1-panel-card-cardid-note.md"
+      },
+      "post": {
+        "tags": [
+          "Cards"
+        ],
+        "summary": "Cards · Adicionar anotação",
+        "parameters": [
+          {
+            "name": "cardId",
+            "in": "path",
+            "description": "ID do card.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Dados para criação da anotação.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PublicReqCreatePanelNoteDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PublicPanelCardNoteDTO"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalException"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ],
+        "operationId": "crm_post_v1-panel-card-cardid-note",
+        "x-infinitegear-index-slug": "post_v1-panel-card-cardid-note",
+        "x-infinitegear-documentation-url": "https://infinitegear.readme.io/reference/post_v1-panel-card-cardid-note.md"
+      }
+    },
+    "/v1/panel/{id}/custom-fields": {
+      "get": {
+        "tags": [
+          "Painéis"
+        ],
+        "summary": "Painéis · Campos personalizados",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do painel.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "NestedList",
+            "in": "query",
+            "description": "Determina a estrutura da lista retornada. Se verdadeiro, os campos serão retornados de forma aninhada, isto é, estruturado em grupos.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PublicCustomFieldDTO"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalException"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ],
+        "operationId": "crm_get_v1-panel-id-custom-fields",
+        "x-infinitegear-index-slug": "get_v1-panel-id-custom-fields",
+        "x-infinitegear-documentation-url": "https://infinitegear.readme.io/reference/get_v1-panel-id-custom-fields.md"
+      }
+    },
+    "/v1/panel/{id}/lost-reason": {
+      "get": {
+        "tags": [
+          "Painéis"
+        ],
+        "summary": "Painéis · Listar motivos de perda",
+        "description": "Listagem paginada de motivos de perda do painel.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do painel do tipo Vendas.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "CreatedAt.Before",
+            "in": "query",
+            "description": "Limite superior de busca, sempre em fuso horário UTM.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "CreatedAt.After",
+            "in": "query",
+            "description": "Limite inferior de busca, sempre em fuso horário UTM.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "UpdatedAt.Before",
+            "in": "query",
+            "description": "Limite superior de busca, sempre em fuso horário UTM.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "UpdatedAt.After",
+            "in": "query",
+            "description": "Limite inferior de busca, sempre em fuso horário UTM.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "PageNumber",
+            "in": "query",
+            "description": "Número da página a ser obtida.",
+            "schema": {
+              "maximum": 2147483647,
+              "minimum": 0,
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "description": "Tamanho da página a ser obtida.",
+            "schema": {
+              "maximum": 100,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int32",
+              "default": 15
+            }
+          },
+          {
+            "name": "OrderBy",
+            "in": "query",
+            "description": "Nome do campo para ser utilizado como pivô da ordenação.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "OrderDirection",
+            "in": "query",
+            "description": "Determina se a ordenação deve ser crescente ou decrescente.",
+            "schema": {
+              "enum": [
+                "ASCENDING",
+                "DESCENDING"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PublicPanelCardResultDTOPublicPageListDTO"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalException"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ],
+        "operationId": "crm_get_v1-panel-id-lost-reason",
+        "x-infinitegear-index-slug": "get_v1-panel-id-lost-reason",
+        "x-infinitegear-documentation-url": "https://infinitegear.readme.io/reference"
+      }
+    },
+    "/v1/panel/{id}": {
+      "get": {
+        "tags": [
+          "Painéis"
+        ],
+        "summary": "Painéis · Obter por ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do painel.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "IncludeDetails",
+            "in": "query",
+            "description": "Detalhes que devem ser incluídos na resposta.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "Tags",
+                  "Steps",
+                  "StepsFields",
+                  "StepsCardCount",
+                  "Cards"
+                ],
+                "type": "string"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PublicPanelDTO"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalException"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ],
+        "operationId": "crm_get_v1-panel-id",
+        "x-infinitegear-index-slug": "get_v1-panel-id",
+        "x-infinitegear-documentation-url": "https://infinitegear.readme.io/reference/get_v1-panel-id.md"
+      }
+    },
+    "/v2/panel/card/{id}": {
+      "get": {
+        "tags": [
+          "Cards"
+        ],
+        "summary": "Cards · Obter por ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do card.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "IncludeDetails",
+            "in": "query",
+            "description": "Detalhes que devem ser incluídos na resposta.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "PanelTitle",
+                  "StepTitle",
+                  "StepPhase",
+                  "ResponsibleUser",
+                  "Contacts",
+                  "CustomFields",
+                  "LostReason"
+                ],
+                "type": "string"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PublicPanelCardDTOV2"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalException"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ],
+        "operationId": "crm_get_v2-panel-card-id",
+        "x-infinitegear-index-slug": "get_v2-panel-card-id",
+        "x-infinitegear-documentation-url": "https://infinitegear.readme.io/reference"
+      }
+    },
+    "/v2/panel/card": {
+      "get": {
+        "tags": [
+          "Cards"
+        ],
+        "summary": "Cards · Listar",
+        "description": "Listagem paginada de cards.",
+        "parameters": [
+          {
+            "name": "PanelId",
+            "in": "query",
+            "description": "ID do painel.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "StepId",
+            "in": "query",
+            "description": "Filtro por ID da etapa.",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "ContactId",
+            "in": "query",
+            "description": "Filtro por ID do contato.",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "ResponsibleUserId",
+            "in": "query",
+            "description": "Filtro por ID do responsável.",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "TextFilter",
+            "in": "query",
+            "description": "Filtro textual. A busca é realizada nos atributos textuais relevantes do item.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IncludeDetails",
+            "in": "query",
+            "description": "Detalhes que devem ser incluídos na resposta.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "PanelTitle",
+                  "StepTitle",
+                  "StepPhase",
+                  "ResponsibleUser",
+                  "Contacts",
+                  "CustomFields",
+                  "LostReason"
+                ],
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "Statuses",
+            "in": "query",
+            "description": "Filtro por situação do card.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "OPEN",
+                  "WON",
+                  "LOST",
+                  "ARCHIVED"
+                ],
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "CreatedAt.Before",
+            "in": "query",
+            "description": "Limite superior de busca, sempre em fuso horário UTM.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "CreatedAt.After",
+            "in": "query",
+            "description": "Limite inferior de busca, sempre em fuso horário UTM.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "UpdatedAt.Before",
+            "in": "query",
+            "description": "Limite superior de busca, sempre em fuso horário UTM.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "UpdatedAt.After",
+            "in": "query",
+            "description": "Limite inferior de busca, sempre em fuso horário UTM.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "PageNumber",
+            "in": "query",
+            "description": "Número da página a ser obtida.",
+            "schema": {
+              "maximum": 2147483647,
+              "minimum": 0,
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "description": "Tamanho da página a ser obtida.",
+            "schema": {
+              "maximum": 100,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int32",
+              "default": 15
+            }
+          },
+          {
+            "name": "OrderBy",
+            "in": "query",
+            "description": "Nome do campo para ser utilizado como pivô da ordenação.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "OrderDirection",
+            "in": "query",
+            "description": "Determina se a ordenação deve ser crescente ou decrescente.",
+            "schema": {
+              "enum": [
+                "ASCENDING",
+                "DESCENDING"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PublicPanelCardDTOV2PublicPageListDTO"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalException"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ],
+        "operationId": "crm_get_v2-panel-card",
+        "x-infinitegear-index-slug": "get_v2-panel-card",
+        "x-infinitegear-documentation-url": "https://infinitegear.readme.io/reference"
+      },
+      "post": {
+        "tags": [
+          "Cards"
+        ],
+        "summary": "Cards · Criar",
+        "requestBody": {
+          "description": "Dados para criação do card.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PublicReqCreatePanelCardDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PublicPanelCardDTOV2"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalException"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ],
+        "operationId": "crm_post_v2-panel-card",
+        "x-infinitegear-index-slug": "post_v2-panel-card",
+        "x-infinitegear-documentation-url": "https://infinitegear.readme.io/reference"
+      }
+    },
+    "/v2/panel": {
+      "get": {
+        "tags": [
+          "Painéis"
+        ],
+        "summary": "Painéis · Listar painéis",
+        "parameters": [
+          {
+            "name": "Title",
+            "in": "query",
+            "description": "Filtro por título do painel.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "query",
+            "description": "Filtro por tipo do painel.",
+            "schema": {
+              "enum": [
+                "MANAGEMENT",
+                "SALES"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "IncludeDetails",
+            "in": "query",
+            "description": "Detalhes que devem ser incluídos na resposta.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "Tags",
+                  "Steps",
+                  "StepsCardCount",
+                  "PanelCardOverdueCount"
+                ],
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "CreatedAt.Before",
+            "in": "query",
+            "description": "Limite superior de busca, sempre em fuso horário UTM.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "CreatedAt.After",
+            "in": "query",
+            "description": "Limite inferior de busca, sempre em fuso horário UTM.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "UpdatedAt.Before",
+            "in": "query",
+            "description": "Limite superior de busca, sempre em fuso horário UTM.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "UpdatedAt.After",
+            "in": "query",
+            "description": "Limite inferior de busca, sempre em fuso horário UTM.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "PageNumber",
+            "in": "query",
+            "description": "Número da página a ser obtida.",
+            "schema": {
+              "maximum": 2147483647,
+              "minimum": 0,
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "description": "Tamanho da página a ser obtida.",
+            "schema": {
+              "maximum": 100,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int32",
+              "default": 15
+            }
+          },
+          {
+            "name": "OrderBy",
+            "in": "query",
+            "description": "Nome do campo para ser utilizado como pivô da ordenação.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "OrderDirection",
+            "in": "query",
+            "description": "Determina se a ordenação deve ser crescente ou decrescente.",
+            "schema": {
+              "enum": [
+                "ASCENDING",
+                "DESCENDING"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PublicPanelDTOPublicPageListDTO"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalException"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ],
+        "operationId": "crm_get_v2-panel",
+        "x-infinitegear-index-slug": "get_v2-panel",
+        "x-infinitegear-documentation-url": "https://infinitegear.readme.io/reference"
+      }
+    },
+    "/v2/panel/card/{id}/duplicate": {
+      "post": {
+        "tags": [
+          "Cards"
+        ],
+        "summary": "Cards · Duplicar",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do card.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Dados para duplicação do card.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PublicReqDuplicatePanelCardDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PublicPanelCardDTOV2"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalException"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ],
+        "operationId": "crm_post_v2-panel-card-id-duplicate",
+        "x-infinitegear-index-slug": "post_v2-panel-card-id-duplicate",
+        "x-infinitegear-documentation-url": "https://infinitegear.readme.io/reference"
+      }
+    },
+    "/v3/panel/card/{id}": {
+      "put": {
+        "tags": [
+          "Cards"
+        ],
+        "summary": "Cards · Atualizar",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do card.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Dados para atualização do card.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PublicReqUpdatePanelCardDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PublicPanelCardDTOV2"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalException"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ],
+        "operationId": "crm_put_v3-panel-card-id",
+        "x-infinitegear-index-slug": "put_v3-panel-card-id",
+        "x-infinitegear-documentation-url": "https://infinitegear.readme.io/reference"
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "InternalException": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "boolean"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "key": {
+            "type": "string",
+            "nullable": true
+          },
+          "text": {
+            "type": "string",
+            "nullable": true
+          },
+          "isUnsolvableError": {
+            "type": "boolean"
+          },
+          "details": {
+            "nullable": true
+          },
+          "id": {
+            "$ref": "#/components/schemas/InternalExceptionId"
+          },
+          "httpStatusCode": {
+            "enum": [
+              "Continue",
+              "SwitchingProtocols",
+              "Processing",
+              "EarlyHints",
+              "OK",
+              "Created",
+              "Accepted",
+              "NonAuthoritativeInformation",
+              "NoContent",
+              "ResetContent",
+              "PartialContent",
+              "MultiStatus",
+              "AlreadyReported",
+              "IMUsed",
+              "MultipleChoices",
+              "Ambiguous",
+              "MovedPermanently",
+              "Moved",
+              "Found",
+              "Redirect",
+              "SeeOther",
+              "RedirectMethod",
+              "NotModified",
+              "UseProxy",
+              "Unused",
+              "TemporaryRedirect",
+              "RedirectKeepVerb",
+              "PermanentRedirect",
+              "BadRequest",
+              "Unauthorized",
+              "PaymentRequired",
+              "Forbidden",
+              "NotFound",
+              "MethodNotAllowed",
+              "NotAcceptable",
+              "ProxyAuthenticationRequired",
+              "RequestTimeout",
+              "Conflict",
+              "Gone",
+              "LengthRequired",
+              "PreconditionFailed",
+              "RequestEntityTooLarge",
+              "RequestUriTooLong",
+              "UnsupportedMediaType",
+              "RequestedRangeNotSatisfiable",
+              "ExpectationFailed",
+              "MisdirectedRequest",
+              "UnprocessableEntity",
+              "Locked",
+              "FailedDependency",
+              "UpgradeRequired",
+              "PreconditionRequired",
+              "TooManyRequests",
+              "RequestHeaderFieldsTooLarge",
+              "UnavailableForLegalReasons",
+              "InternalServerError",
+              "NotImplemented",
+              "BadGateway",
+              "ServiceUnavailable",
+              "GatewayTimeout",
+              "HttpVersionNotSupported",
+              "VariantAlsoNegotiates",
+              "InsufficientStorage",
+              "LoopDetected",
+              "NotExtended",
+              "NetworkAuthenticationRequired"
+            ],
+            "type": "string"
+          },
+          "version": {
+            "type": "string",
+            "nullable": true
+          },
+          "environment": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "InternalExceptionId": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "nullable": true
+          },
+          "shortValue": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PublicFileDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "companyId": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "userId": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "extension": {
+            "type": "string",
+            "nullable": true
+          },
+          "mimeType": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "enum": [
+              "UNDEFINED",
+              "PDF",
+              "EXCEL",
+              "WORD",
+              "IMAGE",
+              "AUDIO",
+              "VIDEO"
+            ],
+            "type": "string"
+          },
+          "publicUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "publicUrlDownload": {
+            "type": "string",
+            "nullable": true
+          },
+          "size": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "isThumbnail": {
+            "type": "boolean"
+          },
+          "thumbnail": {
+            "$ref": "#/components/schemas/PublicFileThumbnailDTO"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PublicFileThumbnailDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "publicUrl": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PublicPanelCardNoteDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "companyId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "panelId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "cardId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "userId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "text": {
+            "type": "string",
+            "nullable": true
+          },
+          "files": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PublicFileDTO"
+            },
+            "nullable": true
+          },
+          "isFromPublicApi": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PublicPanelCardNoteDTOPublicPageListDTO": {
+        "type": "object",
+        "properties": {
+          "pageNumber": {
+            "maximum": 2147483647,
+            "minimum": 0,
+            "type": "integer",
+            "description": "Número da página a ser obtida.",
+            "format": "int32",
+            "default": 1
+          },
+          "pageSize": {
+            "maximum": 100,
+            "minimum": 1,
+            "type": "integer",
+            "description": "Tamanho da página a ser obtida.",
+            "format": "int32",
+            "default": 15
+          },
+          "orderBy": {
+            "type": "string",
+            "description": "Nome do campo para ser utilizado como pivô da ordenação.",
+            "nullable": true
+          },
+          "orderDirection": {
+            "enum": [
+              "ASCENDING",
+              "DESCENDING"
+            ],
+            "type": "string",
+            "description": "Determina se a ordenação deve ser crescente ou decrescente.",
+            "nullable": true
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PublicPanelCardNoteDTO"
+            },
+            "nullable": true
+          },
+          "totalItems": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalPages": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "hasMorePages": {
+            "type": "boolean",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PublicCustomFieldDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "parentId": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "type": {
+            "enum": [
+              "GROUP",
+              "STRING",
+              "TEXT",
+              "INTEGER",
+              "FLOAT",
+              "SINGLESELECT",
+              "MULTISELECT",
+              "DATE",
+              "TIME",
+              "DATETIME",
+              "BOOLEAN"
+            ],
+            "type": "string"
+          },
+          "entityType": {
+            "enum": [
+              "CONTACT",
+              "PANEL"
+            ],
+            "type": "string"
+          },
+          "scopeId": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "companyId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "key": {
+            "type": "string",
+            "nullable": true
+          },
+          "position": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "required": {
+            "type": "boolean"
+          },
+          "visible": {
+            "type": "boolean"
+          },
+          "isValueRange": {
+            "type": "boolean"
+          },
+          "options": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PublicCustomFieldOptionDTO"
+            },
+            "nullable": true
+          },
+          "children": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PublicCustomFieldDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PublicCustomFieldOptionDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PublicPanelCardResultDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "companyId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "panelId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PublicPanelCardResultDTOPublicPageListDTO": {
+        "type": "object",
+        "properties": {
+          "pageNumber": {
+            "maximum": 2147483647,
+            "minimum": 0,
+            "type": "integer",
+            "description": "Número da página a ser obtida.",
+            "format": "int32",
+            "default": 1
+          },
+          "pageSize": {
+            "maximum": 100,
+            "minimum": 1,
+            "type": "integer",
+            "description": "Tamanho da página a ser obtida.",
+            "format": "int32",
+            "default": 15
+          },
+          "orderBy": {
+            "type": "string",
+            "description": "Nome do campo para ser utilizado como pivô da ordenação.",
+            "nullable": true
+          },
+          "orderDirection": {
+            "enum": [
+              "ASCENDING",
+              "DESCENDING"
+            ],
+            "type": "string",
+            "description": "Determina se a ordenação deve ser crescente ou decrescente.",
+            "nullable": true
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PublicPanelCardResultDTO"
+            },
+            "nullable": true
+          },
+          "totalItems": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalPages": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "hasMorePages": {
+            "type": "boolean",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PublicPanelCardContactDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PublicPanelCardDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "companyId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "panelId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "panelTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "stepId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "stepTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "stepPhase": {
+            "enum": [
+              "NONE",
+              "INITIAL",
+              "FINAL"
+            ],
+            "type": "string",
+            "nullable": true
+          },
+          "position": {
+            "type": "number",
+            "format": "double"
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "key": {
+            "type": "string",
+            "nullable": true
+          },
+          "number": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dueDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "isOverdue": {
+            "type": "boolean"
+          },
+          "tagIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "nullable": true
+          },
+          "sessionId": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "monetaryAmount": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "responsibleUserId": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "responsibleUser": {
+            "$ref": "#/components/schemas/PublicPanelCardResponsibleUserDTO"
+          },
+          "contactIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "nullable": true
+          },
+          "contacts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PublicPanelCardContactDTO"
+            },
+            "nullable": true
+          },
+          "customFields": {
+            "type": "object",
+            "additionalProperties": {
+              "nullable": true
+            },
+            "nullable": true
+          },
+          "metadata": {
+            "type": "object",
+            "additionalProperties": {
+              "nullable": true
+            },
+            "nullable": true
+          },
+          "archived": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PublicPanelCardDTOPublicPageListDTO": {
+        "type": "object",
+        "properties": {
+          "pageNumber": {
+            "maximum": 2147483647,
+            "minimum": 0,
+            "type": "integer",
+            "description": "Número da página a ser obtida.",
+            "format": "int32",
+            "default": 1
+          },
+          "pageSize": {
+            "maximum": 100,
+            "minimum": 1,
+            "type": "integer",
+            "description": "Tamanho da página a ser obtida.",
+            "format": "int32",
+            "default": 15
+          },
+          "orderBy": {
+            "type": "string",
+            "description": "Nome do campo para ser utilizado como pivô da ordenação.",
+            "nullable": true
+          },
+          "orderDirection": {
+            "enum": [
+              "ASCENDING",
+              "DESCENDING"
+            ],
+            "type": "string",
+            "description": "Determina se a ordenação deve ser crescente ou decrescente.",
+            "nullable": true
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PublicPanelCardDTO"
+            },
+            "nullable": true
+          },
+          "totalItems": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalPages": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "hasMorePages": {
+            "type": "boolean",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PublicPanelCardResponsibleUserDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PublicPanelDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "companyId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "archived": {
+            "type": "boolean"
+          },
+          "scope": {
+            "enum": [
+              "COMPANY",
+              "DEPARTMENT",
+              "USER"
+            ],
+            "type": "string"
+          },
+          "departmentIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "nullable": true
+          },
+          "userId": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "thumbnailId": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "thumbnailFile": {
+            "$ref": "#/components/schemas/PublicFileDTO"
+          },
+          "key": {
+            "type": "string",
+            "nullable": true
+          },
+          "overdueCardCount": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "stepTitles": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PublicPanelTagDTO"
+            },
+            "nullable": true
+          },
+          "steps": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PublicPanelStepDTO"
+            },
+            "nullable": true
+          },
+          "type": {
+            "enum": [
+              "MANAGEMENT",
+              "SALES"
+            ],
+            "type": "string"
+          },
+          "autoLossDays": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PublicPanelStepDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "companyId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "panelId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "archived": {
+            "type": "boolean"
+          },
+          "position": {
+            "type": "number",
+            "format": "double"
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "isInitial": {
+            "type": "boolean"
+          },
+          "isFinal": {
+            "type": "boolean"
+          },
+          "cardCount": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "overdueCardCount": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "monetaryAmount": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "fields": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PublicPanelStepFieldDTO"
+            },
+            "nullable": true
+          },
+          "cards": {
+            "$ref": "#/components/schemas/PublicPanelCardDTOPublicPageListDTO"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PublicPanelStepFieldDTO": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "enum": [
+              "DEFAULT_FIELD",
+              "CUSTOM_FIELD"
+            ],
+            "type": "string"
+          },
+          "position": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "visible": {
+            "type": "boolean",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PublicPanelTagDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "companyId": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "panelId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "nameColor": {
+            "type": "string",
+            "nullable": true
+          },
+          "bgColor": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LostReasonDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PublicPanelCardDTOV2": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "companyId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "panelId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "panelTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "stepId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "stepTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "stepPhase": {
+            "enum": [
+              "NONE",
+              "INITIAL",
+              "FINAL"
+            ],
+            "type": "string",
+            "nullable": true
+          },
+          "position": {
+            "type": "number",
+            "format": "double"
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "key": {
+            "type": "string",
+            "nullable": true
+          },
+          "number": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dueDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "isOverdue": {
+            "type": "boolean"
+          },
+          "tagIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "nullable": true
+          },
+          "sessionId": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "monetaryAmount": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "responsibleUserId": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "responsibleUser": {
+            "$ref": "#/components/schemas/PublicPanelCardResponsibleUserDTO"
+          },
+          "contactIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "nullable": true
+          },
+          "contacts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PublicPanelCardContactDTO"
+            },
+            "nullable": true
+          },
+          "customFields": {
+            "type": "object",
+            "additionalProperties": {
+              "nullable": true
+            },
+            "nullable": true
+          },
+          "metadata": {
+            "type": "object",
+            "additionalProperties": {
+              "nullable": true
+            },
+            "nullable": true
+          },
+          "status": {
+            "enum": [
+              "OPEN",
+              "WON",
+              "LOST",
+              "ARCHIVED"
+            ],
+            "type": "string"
+          },
+          "lostReason": {
+            "$ref": "#/components/schemas/LostReasonDTO"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PublicPanelCardDTOV2PublicPageListDTO": {
+        "type": "object",
+        "properties": {
+          "pageNumber": {
+            "maximum": 2147483647,
+            "minimum": 0,
+            "type": "integer",
+            "description": "Número da página a ser obtida.",
+            "format": "int32",
+            "default": 1
+          },
+          "pageSize": {
+            "maximum": 100,
+            "minimum": 1,
+            "type": "integer",
+            "description": "Tamanho da página a ser obtida.",
+            "format": "int32",
+            "default": 15
+          },
+          "orderBy": {
+            "type": "string",
+            "description": "Nome do campo para ser utilizado como pivô da ordenação.",
+            "nullable": true
+          },
+          "orderDirection": {
+            "enum": [
+              "ASCENDING",
+              "DESCENDING"
+            ],
+            "type": "string",
+            "description": "Determina se a ordenação deve ser crescente ou decrescente.",
+            "nullable": true
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PublicPanelCardDTOV2"
+            },
+            "nullable": true
+          },
+          "totalItems": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalPages": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "hasMorePages": {
+            "type": "boolean",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PublicPanelDTOPublicPageListDTO": {
+        "type": "object",
+        "properties": {
+          "pageNumber": {
+            "maximum": 2147483647,
+            "minimum": 0,
+            "type": "integer",
+            "description": "Número da página a ser obtida.",
+            "format": "int32",
+            "default": 1
+          },
+          "pageSize": {
+            "maximum": 100,
+            "minimum": 1,
+            "type": "integer",
+            "description": "Tamanho da página a ser obtida.",
+            "format": "int32",
+            "default": 15
+          },
+          "orderBy": {
+            "type": "string",
+            "description": "Nome do campo para ser utilizado como pivô da ordenação.",
+            "nullable": true
+          },
+          "orderDirection": {
+            "enum": [
+              "ASCENDING",
+              "DESCENDING"
+            ],
+            "type": "string",
+            "description": "Determina se a ordenação deve ser crescente ou decrescente.",
+            "nullable": true
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PublicPanelDTO"
+            },
+            "nullable": true
+          },
+          "totalItems": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalPages": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "hasMorePages": {
+            "type": "boolean",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PublicReqCreatePanelNoteDTO": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "maxLength": 8000,
+            "type": "string",
+            "description": "Texto da anotação.",
+            "nullable": true
+          },
+          "fileUrls": {
+            "maxItems": 3,
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "URL pública de algum arquivo que deseja-se anexar à anotação.\r\nO tamanho máximo permitido para um arquivo é de 25MB.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PublicReqDuplicateOptionsPanelCardDTO": {
+        "type": "object",
+        "properties": {
+          "archiveOriginalCard": {
+            "type": "boolean",
+            "description": "Arquiva item original"
+          },
+          "fields": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "Undefined",
+                "All",
+                "Amount",
+                "DueDate",
+                "Tags",
+                "MonetaryAmount",
+                "Contacts",
+                "ResponsibleUser",
+                "CustomFields",
+                "Notes"
+              ],
+              "type": "string"
+            },
+            "description": "Campos que devem ser incluídos da duplicação, se vazio copiará tudo.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PublicReqDuplicatePanelCardDTO": {
+        "type": "object",
+        "properties": {
+          "copyToStepId": {
+            "type": "string",
+            "description": "ID da etapa de destino, pode ser uma etapa do mesmo painel ou de outro painel. Se vazio, mantem a cópia na mesma etapa.",
+            "format": "uuid",
+            "nullable": true
+          },
+          "options": {
+            "$ref": "#/components/schemas/PublicReqDuplicateOptionsPanelCardDTO"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PublicReqCreatePanelCardDTO": {
+        "required": [
+          "stepId",
+          "title"
+        ],
+        "type": "object",
+        "properties": {
+          "stepId": {
+            "type": "string",
+            "description": "ID da etapa do painel onde o item deverá ser inserido.",
+            "format": "uuid"
+          },
+          "title": {
+            "maxLength": 500,
+            "minLength": 1,
+            "type": "string",
+            "description": "Título do item."
+          },
+          "description": {
+            "maxLength": 8000,
+            "type": "string",
+            "description": "Descrição do item.",
+            "nullable": true
+          },
+          "position": {
+            "maximum": 2147483647,
+            "minimum": 0,
+            "type": "number",
+            "description": "Posição do item na etapa.",
+            "format": "double",
+            "nullable": true
+          },
+          "dueDate": {
+            "type": "string",
+            "description": "Data de vencimento do item.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "responsibleUserId": {
+            "type": "string",
+            "description": "ID do usuário responsável pelo item.",
+            "format": "uuid",
+            "nullable": true
+          },
+          "tagIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "description": "IDss das etiquetas atribuídas.",
+            "nullable": true
+          },
+          "tagNames": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Nomes das etiquetas atribuídas. Este campo será ignorado caso `TagIds` seja definido.",
+            "nullable": true
+          },
+          "contactIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "IDs dos contatos relacionados ao item.",
+            "nullable": true
+          },
+          "sessionId": {
+            "type": "string",
+            "description": "ID da conversa relacionada ao item.",
+            "format": "uuid",
+            "nullable": true
+          },
+          "monetaryAmount": {
+            "type": "number",
+            "description": "Valor monetário atribuído ao item.",
+            "format": "double",
+            "nullable": true
+          },
+          "customFields": {
+            "type": "object",
+            "additionalProperties": {
+              "nullable": true
+            },
+            "description": "Objeto chave-valor para definir valores de campos personalizados no item.\r\nCada item do objeto deverá ter como nome a chave do campo personalizado.\r\nCaso a chave não corresponda a algum campo personalizado ou o tipo de dados do valor seja incompatível, o item será ignorado.",
+            "nullable": true
+          },
+          "metadata": {
+            "type": "object",
+            "additionalProperties": {
+              "nullable": true
+            },
+            "description": "Metadados relevantes para o item. Neste campo, pode ser salvo qualquer propriedade adicional para o item, na estrutura chave-valor.\r\n- Para adicionar um metadado: utilize uma chave não utilizada anteriormente neste item, atribuindo o novo valor;\r\n- Para atualizar um metadado: utilize a chave salva anteriormente neste item, atribuindo o novo valor;\r\n- Para remover um metadado: utilize a chave salva anteriormente, atribuindo valor nulo.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PublicReqUpdatePanelCardDTO": {
+        "type": "object",
+        "properties": {
+          "fields": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "StepId",
+                "Title",
+                "Description",
+                "Position",
+                "DueDate",
+                "ResponsibleUserId",
+                "TagIds",
+                "ContactIds",
+                "SessionId",
+                "MonetaryAmount",
+                "Archived",
+                "CustomFields",
+                "Metadata",
+                "Status"
+              ],
+              "type": "string"
+            },
+            "description": "Campos a serem atualizados.",
+            "nullable": true
+          },
+          "stepId": {
+            "type": "string",
+            "description": "ID da etapa do painel para onde o item deverá ser movido.",
+            "format": "uuid",
+            "nullable": true
+          },
+          "title": {
+            "maxLength": 500,
+            "type": "string",
+            "description": "Título do item.",
+            "nullable": true
+          },
+          "description": {
+            "maxLength": 8000,
+            "type": "string",
+            "description": "Descrição do item.",
+            "nullable": true
+          },
+          "position": {
+            "maximum": 2147483647,
+            "minimum": 0,
+            "type": "number",
+            "description": "Posição do item na etapa.",
+            "format": "double",
+            "nullable": true
+          },
+          "dueDate": {
+            "type": "string",
+            "description": "Data de vencimento do item.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "responsibleUserId": {
+            "type": "string",
+            "description": "ID do usuário responsável pelo item.",
+            "format": "uuid",
+            "nullable": true
+          },
+          "tagIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "description": "IDss das etiquetas atribuídas.",
+            "nullable": true
+          },
+          "tagNames": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Nomes das etiquetas atribuídas. Este campo será ignorado caso `TagIds` seja definido.",
+            "nullable": true
+          },
+          "contactIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "description": "IDs dos contatos relacionados ao item.",
+            "nullable": true
+          },
+          "sessionId": {
+            "type": "string",
+            "description": "ID da conversa relacionada ao item.",
+            "format": "uuid",
+            "nullable": true
+          },
+          "monetaryAmount": {
+            "type": "number",
+            "description": "Valor monetário atribuído ao item.",
+            "format": "double",
+            "nullable": true
+          },
+          "status": {
+            "enum": [
+              "OPEN",
+              "WON",
+              "LOST",
+              "ARCHIVED"
+            ],
+            "type": "string",
+            "description": "Determina o status do item.",
+            "nullable": true
+          },
+          "lostReasonId": {
+            "type": "string",
+            "description": "ID do motivo de perda.",
+            "format": "uuid",
+            "nullable": true
+          },
+          "customFields": {
+            "type": "object",
+            "additionalProperties": {
+              "nullable": true
+            },
+            "description": "Objeto chave-valor para definir valores de campos personalizados no item.\r\nCada item do objeto deverá ter como nome a chave do campo personalizado.\r\nCaso a chave não corresponda a algum campo personalizado ou o tipo de dados do valor seja incompatível, o item será ignorado.",
+            "nullable": true
+          },
+          "metadata": {
+            "type": "object",
+            "additionalProperties": {
+              "nullable": true
+            },
+            "description": "Metadados relevantes para o item. Neste campo, pode ser salvo qualquer propriedade adicional para o item, na estrutura chave-valor.\r\n- Para adicionar um metadado: utilize uma chave não utilizada anteriormente neste item, atribuindo o novo valor;\r\n- Para atualizar um metadado: utilize a chave salva anteriormente neste item, atribuindo o novo valor;\r\n- Para remover um metadado: utilize a chave salva anteriormente, atribuindo valor nulo.",
+            "nullable": true
+          },
+          "options": {
+            "$ref": "#/components/schemas/PublicReqUpdatePanelCardOptionsDTO"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PublicReqUpdatePanelCardOptionsDTO": {
+        "type": "object",
+        "properties": {
+          "upsertTagOperation": {
+            "enum": [
+              "InsertIfNotExists",
+              "DeleteIfExists",
+              "ReplaceAll"
+            ],
+            "type": "string",
+            "description": "Defina como deve ser realizada a alteração no campo Etiquetas:\r\nInsertIfNotExists: insere apenas etiquetas que ainda não estão no card.\r\nDeleteIfExists: remove apenas etiquetas que já estão no card.\r\nReplaceAll: remove todas as etiquetas e inclui apenas as informadas (padrão).",
+            "default": "ReplaceAll",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    }
+  },
+  "security": [
+    {
+      "Bearer": []
+    }
+  ],
+  "externalDocs": {
+    "url": "https://infinitegear.readme.io/llms.txt"
+  }
+}
